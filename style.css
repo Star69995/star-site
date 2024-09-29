@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Varela Round";
+}
+
+nav {
+    background-color: #5e2c8a;
+    opacity: 0.9;
+    /* overflow: hidden; */
+    position: sticky;
+    top: 0;
+    /* width: 70%; */
+    max-width: 700px;
+    margin: 0 auto;
+    /* Centering the element */
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.horizontalNav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* .active {
+    background-color: #9045d1;
+} */
+li a:hover:not(.active) {
+    background-color: #3d1c59;
+}
+
+body {
+    background-color: rgb(232, 224, 250);
+    background-image: url('img/background-tile.png');
+    background-repeat: repeat;
+    background-size: 200px;
+
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100vh;
+
+}
+
+div {
+    border: 3px solid black;
+    border-radius: 50px;
+    text-align: center;
+    font-family: "Varela Round";
+    background-color: rgb(237, 216, 255);
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+}
+
+div:hover {
+    background-color: rgb(224, 196, 248);
+        /* box-shadow: none; */
+        box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px inset;
+}
+
+input,
+select {
+    margin-bottom: 10px;
+    font-family: "Varela Round";
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(90, 0, 194);
+    font-family: "Varela Round";
+    border-radius: 5px;
+    padding: 10px;
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999999;
+}
+
+button:hover {
+    background-color: rgb(80, 36, 102)
+}
+
+button:active {
+    background-color: rgb(80, 36, 102);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+h2,
+h1 {
+    color: rgb(35, 6, 139);
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.footer {
+    padding: 10px;
+}
+
+
+div {
+    padding: 40px;
+    /* padding: 40px;
+    padding-left: 100px;
+    padding-right: 100px; */
+    align-self: center;
+    margin: 10px;
+}
