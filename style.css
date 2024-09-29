@@ -113,7 +113,7 @@ button:active {
     transform: translateY(4px);
 }
 
-h2,
+h2, h3,
 h1 {
     color: rgb(35, 6, 139);
     padding-left: 100px;
@@ -132,9 +132,6 @@ span {
 
 div {
     padding: 40px;
-    /* padding: 40px;
-    padding-left: 100px;
-    padding-right: 100px; */
     align-self: center;
     margin: 10px;
 }
@@ -145,7 +142,29 @@ div {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding: 0px;
+    padding-bottom: 40px;
 }
-.imgContainer >  a >img {
+.imgContainer img {
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
     height: 300px;
 }
+
+button a{
+    color: white;
+    text-decoration: none;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+/* .projects > div {
+    width: 300px;
+    height: 300px;
+} */
