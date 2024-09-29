@@ -164,7 +164,13 @@ button a{
     gap: 20px;
     flex-wrap: wrap;
 }
-/* .projects > div {
-    width: 300px;
-    height: 300px;
-} */
+
+@media (max-width: 1200px) {
+    h2,
+        h3,
+        h1 {
+            color: rgb(35, 6, 139);
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+}
