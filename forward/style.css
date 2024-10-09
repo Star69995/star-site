@@ -6,23 +6,6 @@
 }
 
 
-/* .container-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-margin: 0 auto;
-  border: black 6px solid;
-}
-
-.form {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-} */
-
-
 html,
 body {
   height: 100%;
@@ -30,21 +13,18 @@ body {
   display: flex;
 }
 
-
-
 body {
   height: 100%;
   margin: 0;
   display: flex;
   background-image: url('img/Path\ 15.png');
   background-repeat: no-repeat;
-  /* background-size: 1920px; */
-  /* background-size: 100%; */
   background-position: right top;
 }
 
 .container-form {
   width: 100%;
+  width: 90vw;
   display: flex;
   justify-content: flex-start;
   /* מיישר את הטופס לצד ימין */
@@ -78,12 +58,11 @@ form {
 .form-title {
   font: normal normal 900 36px/53px Heebo;
   color: white;
-    text-align: center;
+  text-align: center;
 }
 
 .form-text {
   font: normal normal normal 20px/29px Heebo;
-  /* width: 90%; */
   width: 417.5px;
   text-align: center;
   text-align: justify;
@@ -120,50 +99,93 @@ form {
   margin-top: 15px;
   transition: font 0.3s ease-in-out;
 }
+
 form>button:hover {
   font: normal normal bold 28px/37px Heebo;
 }
 
-/* @media (max-width: 1200px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .container-img>img {
-    width: 100%;
-  }
-
-  .container-img {
-    height: 35vh;
-  }
-
+@media (max-width: 1200px) {
   .form-title {
-    font: normal normal 900 28px/41px Heebo;
+    font: normal normal 900 25px/30px Heebo;
   }
 
   .form-text {
     font: normal normal normal 15px/22px Heebo;
-    width: 100%;
   }
 
   .form-control>label {
     font: normal normal bold 10px/14px Heebo;
   }
 
-  .form-control>input,
+
   .form>button {
+    padding: 5px;
+  }
+
+  .form-control>input {
+    font: normal normal normal 15px/22px Heebo;
+    margin-top: 5px;
+    padding: 10px;
+    height: auto;
+  }
+
+  body {
+    justify-content: center;
+  }
+
+
+
+
+}
+
+@media (max-width: 850px) {
+
+
+  .container-form {
+    width: 90vw;
+  }
+
+  .form-title {
+    font: normal normal 900 25px/30px Heebo;
+  }
+
+  .form-text {
+    font: normal normal normal 15px/22px Heebo;
+    width: 90%;
+  }
+
+  .form-control>label {
+    font: normal normal bold 10px/14px Heebo;
+  }
+
+
+  .form>button {
+    padding: 5px;
+  }
+
+  .form-control>input {
+    font: normal normal normal 15px/22px Heebo;
+    margin-top: 5px;
+    padding: 10px;
+    height: auto;
     width: 100%;
-    padding: 0 43px;
-    height: 34px;
+  }
+
+  body {
+    justify-content: center;
+    background-size: 850px;
+  }
+
+
+  .container-form {
+    width: 90%;
+    margin: 0 auto;
   }
 
   .form {
-    width: 100%;
-    padding: 0 43px;
-    display: flex;
+    /* max-width: 400px; */
+    padding: 40px;
+    width: 90%;
   }
 
-  .container-form {
-    height: 50vh;
-  }
-} */
+}
