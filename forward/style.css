@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Heebo, sans-serif;
+}
+
+
+/* .container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+margin: 0 auto;
+  border: black 6px solid;
+}
+
+.form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+} */
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+}
+
+
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  background-image: url('img/Path\ 15.png');
+  background-repeat: no-repeat;
+  /* background-size: 1920px; */
+  /* background-size: 100%; */
+  background-position: right top;
+}
+
+.container-form {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  /* מיישר את הטופס לצד ימין */
+  align-items: center;
+  /* padding-right: 5%; */
+  margin-right: 50%;
+  /* מגדיר מרווח מהצד הימני */
+}
+
+form {
+  /* width: 100%; */
+  /* מגדיר את רוחב הטופס */
+  background-color: #1A1A1AD4;
+  /* צבע רקע */
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 20px;
+  /* max-width: 800px; */
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+
+
+
+
+
+.form-title {
+  font: normal normal 900 36px/53px Heebo;
+  color: white;
+    text-align: center;
+}
+
+.form-text {
+  font: normal normal normal 20px/29px Heebo;
+  /* width: 90%; */
+  width: 417.5px;
+  text-align: center;
+  text-align: justify;
+  color: white;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control>label {
+  font: normal normal bold 16px/24px Heebo;
+  color: white;
+}
+
+.form-control>input {
+  width: 90%;
+  width: 417.5px;
+  height: 50px;
+  border-radius: 0px;
+  border: 1px solid #D31C75;
+  font: normal normal normal 20px/29px Heebo;
+}
+
+.form>button {
+  width: 166px;
+  height: 50px;
+  background: #D31C75 0% 0% no-repeat padding-box;
+  border: 0px;
+  font: normal normal bold 22px/30px Heebo;
+  letter-spacing: 0.33px;
+  color: white;
+  margin-top: 15px;
+  transition: font 0.3s ease-in-out;
+}
+form>button:hover {
+  font: normal normal bold 28px/37px Heebo;
+}
+
+/* @media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container-img>img {
+    width: 100%;
+  }
+
+  .container-img {
+    height: 35vh;
+  }
+
+  .form-title {
+    font: normal normal 900 28px/41px Heebo;
+  }
+
+  .form-text {
+    font: normal normal normal 15px/22px Heebo;
+    width: 100%;
+  }
+
+  .form-control>label {
+    font: normal normal bold 10px/14px Heebo;
+  }
+
+  .form-control>input,
+  .form>button {
+    width: 100%;
+    padding: 0 43px;
+    height: 34px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 43px;
+    display: flex;
+  }
+
+  .container-form {
+    height: 50vh;
+  }
+} */

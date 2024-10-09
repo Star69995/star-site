@@ -156,7 +156,7 @@ form>button {
   font: normal normal bold 24px/33px Heebo;
   letter-spacing: 0.33px;
   color: #011560;
-  transition: font 0.3s ease;
+  transition: font 0.3s ease-in-out;
 
 }
 
