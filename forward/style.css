@@ -23,29 +23,20 @@ body {
 }
 
 .container-form {
-  width: 100%;
   width: 90vw;
   display: flex;
   justify-content: flex-start;
-  /* מיישר את הטופס לצד ימין */
   align-items: center;
-  /* padding-right: 5%; */
-  margin-right: 50%;
-  /* מגדיר מרווח מהצד הימני */
+  margin-right: 20%;
 }
 
 form {
-  /* width: 100%; */
-  /* מגדיר את רוחב הטופס */
   background-color: #1A1A1AD4;
-  /* צבע רקע */
   padding: 80px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   gap: 20px;
-  /* max-width: 800px; */
   padding-top: 90px;
   padding-bottom: 100px;
 }
@@ -142,7 +133,12 @@ form>button:hover {
 
 
   .container-form {
-    width: 90vw;
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .form-title {
@@ -151,7 +147,7 @@ form>button:hover {
 
   .form-text {
     font: normal normal normal 15px/22px Heebo;
-    width: 90%;
+    width: 100%;
   }
 
   .form-control>label {
@@ -160,7 +156,10 @@ form>button:hover {
 
 
   .form>button {
-    padding: 5px;
+    width: fit-content;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .form-control>input {
@@ -172,20 +171,13 @@ form>button:hover {
   }
 
   body {
-    justify-content: center;
     background-size: 850px;
   }
 
-
-  .container-form {
-    width: 90%;
-    margin: 0 auto;
-  }
-
   .form {
-    /* max-width: 400px; */
     padding: 40px;
     width: 90%;
+    max-width: 400px;
   }
 
 }
