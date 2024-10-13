@@ -95,10 +95,6 @@ form>button:hover {
   font: normal normal bold 28px/37px Heebo;
 }
 
-
-
-
-
 i {
   background-color: #FDBD03;
   border-radius: 50%;
@@ -124,7 +120,6 @@ i:hover {
   top: 50px;
 }
 
-
 .decorative-rectangle-top {
   position: fixed;
   top: 0;
@@ -142,28 +137,6 @@ i:hover {
   height: 18px;
   background-color: #FDBD03;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width: 1200px) {
@@ -236,9 +209,7 @@ i:hover {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
-    /* width: 100%; */
   }
-
 
   i {
     font-size: 1em;
@@ -257,13 +228,6 @@ i:hover {
   .decorative-rectangle-bottom {
     width: 100%;
   }
-
-
-
-
-
-
-
 
 
 }
