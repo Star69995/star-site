@@ -13,7 +13,7 @@
   height: 100vh;
 }
 
-.container-img > img {
+.container-img>img {
   height: 100%;
   width: 60vw;
   object-fit: cover;
@@ -51,12 +51,12 @@
   flex-direction: column;
 }
 
-.form-control > label {
+.form-control>label {
   font: normal normal bold 16px/24px Heebo;
   color: #2c2c2c;
 }
 
-.form-control > input {
+.form-control>input {
   width: 90%;
   height: 50px;
   background: #e5eeff 0% 0% no-repeat padding-box;
@@ -65,7 +65,7 @@
   font: normal normal normal 20px/29px Heebo;
 }
 
-.form > button {
+.form>button {
   width: 166px;
   height: 50px;
   background: #020253 0% 0% no-repeat padding-box;
@@ -85,7 +85,7 @@ form>button:hover {
     flex-direction: column;
   }
 
-  .container-img > img {
+  .container-img>img {
     width: 100%;
   }
 
@@ -102,15 +102,19 @@ form>button:hover {
     width: 100%;
   }
 
-  .form-control > label {
+  .form-control>label {
     font: normal normal bold 10px/14px Heebo;
   }
 
-  .form-control > input,
-  .form > button {
+  .form-control>input,
+  .form>button {
     width: 100%;
     padding: 0 43px;
     height: 34px;
+  }
+
+  .form-control>input {
+    font: normal normal normal 15px/22px Heebo;
   }
 
   .form {
