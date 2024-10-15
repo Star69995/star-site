@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף ביניים</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <nav>
+        <ul class="horizontalNav">
+            <li><a href="#">עליי</a></li>
+            <li><a href="#">השפות שלי</a></li>
+            <li><a href="#">תיק העבודות שלי</a></li>
+            <li><a href="#">צרו קשר</a></li>
+        </ul>
+    </nav> -->
+
+
+    <section>
+        <div class="strip">
+            <h1 id="pageTitle">דף ביניים</h1>
+            <p id="pageDescription">הכנה לדף</p>
+            <button><a id="pageLink" href="#">מעבר לדף</a></button>
+            <button><a id="downloadLink" href="#" download>הורד את הדף</a></button>
+        </div>
+    </section>
+
+    <script>
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const page = urlParams.get('page');
+        const title = urlParams.get('title');
+        const description = urlParams.get('description');
+
+        // Set the dynamic content
+        document.getElementById('pageTitle').innerText = title;
+        document.getElementById('pageDescription').innerText = description;
+        document.getElementById('pageLink').href = page;
+        document.getElementById('downloadLink').href = page;
+    </script>
+</body>
+
+</html>

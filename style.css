@@ -6,21 +6,33 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Varela Round";
+    scroll-margin-top: 70px;
+    scroll-behavior: smooth;
 }
+
+/* nav {
+    background-color: #5e2c8a;
+    opacity: 0.9;
+    position: sticky;
+    top: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+} */
 
 nav {
     background-color: #5e2c8a;
-    opacity: 0.9;
-    /* overflow: hidden; */
+    opacity: 1;
     position: sticky;
     top: 0;
-    /* width: 70%; */
-    max-width: 700px;
-    margin: 0 auto;
-    /* Centering the element */
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px;
 }
+
+
+
+
 
 .horizontalNav {
     list-style-type: none;
@@ -46,9 +58,14 @@ li a:hover:not(.active) {
 }
 
 body {
-    background-color: rgb(232, 224, 250);
-    background-image: url('img/background-tile.png');
+    background-color: rgb(243, 240, 250);
+}
+
+.stars {
+
+    background-image: url('img/Star_Dim_Tile.png');
     background-repeat: repeat;
+    background-position: center;
     background-size: 200px;
 
 }
@@ -63,20 +80,40 @@ section {
 
 }
 
-div {
-    border: 3px solid black;
-    border-radius: 50px;
-    text-align: center;
-    font-family: "Varela Round";
-    background-color: rgb(237, 216, 255);
-    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
+p {
+    margin: 20px;
 }
 
 div:hover {
-    background-color: rgb(224, 196, 248);
-        /* box-shadow: none; */
-        box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px inset;
+    /* background-color: rgb(224, 196, 248); */
+    /* box-shadow: none; */
+    /* box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px inset; */
 }
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.strip {
+    text-align: center;
+    background-color: rgb(237, 216, 255);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    padding: 40px;
+    align-self: center;
+    margin: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
 
 input,
 select {
@@ -113,11 +150,25 @@ button:active {
     transform: translateY(4px);
 }
 
-h2, h3,
+h2,
+h3,
 h1 {
     color: rgb(35, 6, 139);
     padding-left: 100px;
     padding-right: 100px;
+    margin: 20px;
+}
+
+.stars h2 {
+    background-color: rgba(200, 219, 255, 0.589);
+    display: inline;
+    padding: 20px;
+    border-radius: 100px;
+}
+
+.stars>div:first-child {
+
+    margin-bottom: 40px;
 }
 
 span {
@@ -130,11 +181,11 @@ span {
 }
 
 
-div {
-    padding: 40px;
-    align-self: center;
-    margin: 10px;
-}
+
+
+
+
+
 
 .imgContainer {
     display: flex;
@@ -144,33 +195,94 @@ div {
     gap: 20px;
     padding: 0px;
     padding-bottom: 40px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: rgb(237, 216, 255);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    align-self: center;
+    margin: 0px;
 }
+
 .imgContainer img {
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
-    height: 300px;
+    max-height: 300px;
 }
 
-button a{
+button a {
     color: white;
     text-decoration: none;
 }
 
-.projects {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+i {
+    background-color: #b6b1ff;
+    border-radius: 50%;
+    padding: 20px;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
+i:hover {
+    /* background-color: #8b87c4; */
+    /* font-size: 20px; */
+    color: #008cff;
+}
+
+.icons {
+    direction: ltr;
+    padding: 10px;
+    margin: -10px;
+    background-color: white;
+}
+
+
+
+
+
+/* .divider-container {
+    padding-bottom: 0px;
+    overflow: hidden;
+}
+
+
+.divider {
+    width: 100vw;
+    height: auto;
+    margin: -40px;
+    object-fit: fill;
+} */
+
+
+
+
+
 @media (max-width: 1200px) {
+
     h2,
-        h3,
-        h1 {
-            color: rgb(35, 6, 139);
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+    h3,
+    h1 {
+        color: rgb(35, 6, 139);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* For small screens like mobile devices */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .imgContainer img {
+        width: 100%;
+        /* Make images full width of the container */
+        max-width: 300px;
+        /* Limit maximum size */
+    }
 }

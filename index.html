@@ -7,82 +7,103 @@
     <title>האתר של סטאר</title>
     <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <nav>
         <ul class="horizontalNav">
-            <li><a href="#">עליי</a></li>
-            <li><a href="#">השפות שלי</a></li>
-            <li><a href="#">תיק העבודות שלי</a></li>
+            <li><a href="#">התיק שלי</a></li>
+            <li><a href="#about">עליי</a></li>
+            <li><a href="#langs">השפות שלי</a></li>
+            <li><a href="#projects">תיק העבודות שלי</a></li>
             <li><a href="#">צרו קשר</a></li>
         </ul>
     </nav>
 
     <section>
 
-        <div>
-            <h1>ברוכים הבאים לאתר שלי</h1>
+        <div class="strip divider-container">
+            <h1>ברוכים הבאים לתיק העבודות שלי</h1>
+
+            <!-- <img class="divider" src="img/wavy-divider.svg">
+
+            </img> -->
+
         </div>
-        <div><button><a href="Star Cohen english CV.docx" download="Star Cohen english CV.docx">הורדת קורות
-                    חיי</a></button></div>
-        <div>
+
+        <div class="strip icons" id="langs">
+            <i class="fa-brands fa-html5" title="HTML"></i>
+            <i class="fa-brands fa-css3-alt" title="CSS"></i>
+            <i class="fa-brands fa-js" title="JavaScript"></i>
+            <i class="fa-brands fa-react" title="React"></i>
+
+        </div>
+
+        <div class="strip" id="about">
+            <h2>קצת עליי</h2>
             <p>
-                תהנו להסתכל מסביב באתר ולראות מה יש לי להציע.
+                אני איש צעיר מלא מוטיבציה והתלהבות, במיוחד לפרויקטי קוד. ופה נמצא רק קצה הקרחון.
+
+            <p> הגבול היחיד הוא הדמיון.</p>
             </p>
-        </div>
 
-        <div>
-            <p>
-                אני אעדכן את האתר באופן קבוע עם תוכן חדש ומעניין, אז שווה לחזור שוב ולבדוק מה חדש.
-            </p>
-        </div>
-        <div>
-            <h2>עבודות HTML ו-CSS</h2>
+            <button><a href="Star Cohen english CV.docx" download="Star Cohen english CV.docx">הורדת קורות
+                    חיי</a></button>
         </div>
 
 
-        <div class="projects">
-
-            <div class="imgContainer">
-                <a href="Coffee/index.html" target="_blank" rel="noopener noreferrer">
-                    <img src="Coffee/images/Coffee.png" alt="coffee">
-                </a>
-                <h3>קפה</h3>
-                <p>דף נחיתה</p>
-            </div>
-
-            <div class="imgContainer">
-                <a href="gallery/index.html" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
-                </a>
-                <h3>גריד</h3>
-                <p>דף נחיתה</p>
-            </div>
-            <div class="imgContainer">
-                <a href="forward/index.html" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
-                </a>
-                <h3>פרויקט</h3>
-                <p>דף נחיתה</p>
-            </div>
-            <div class="imgContainer">
-                <a href="icons page/index.html" target="_blank" rel="noopener noreferrer">
-                    <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
-                </a>
-                <h3>דף נחיתה צהוב</h3>
-                <p>דף נחיתה</p>
+        <div class="strip stars" id="projects">
+            <div>
+                <h2>עבודות HTML ו-CSS</h2>
             </div>
 
 
-            <div class="imgContainer">
-                <a href="#">
-                    <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
-                </a>
-                <h3>פרויקט</h3>
-                <p>דף נחיתה</p>
-            </div>
+            <div class="projects">
 
+                <div class="imgContainer">
+                    <a href="intermediate.html?page=Coffee/index.html&title=קפה&description=דף נחיתה" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="Coffee/images/Coffee.png" alt="coffee">
+                    </a>
+                    <h3>קפה</h3>
+                    <p>דף נחיתה</p>
+                </div>
+
+                <div class="imgContainer">
+                    <a href="gallery/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                    </a>
+                    <h3>גריד</h3>
+                    <p>דף נחיתה</p>
+                </div>
+                <div class="imgContainer">
+                    <a href="forward/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                    </a>
+                    <h3>הדרך קדימה</h3>
+                    <p>דף נחיתה</p>
+                </div>
+                <div class="imgContainer">
+                    <a href="icons page/index.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                    </a>
+                    <h3>דף נחיתה צהוב</h3>
+                    <p>דף נחיתה</p>
+                </div>
+
+
+                <div class="imgContainer">
+                    <a href="#">
+                        <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                    </a>
+                    <h3>פרויקט</h3>
+                    <p>דף נחיתה</p>
+                </div>
+
+            </div>
         </div>
 
         <div class="footer">
