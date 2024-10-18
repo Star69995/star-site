@@ -1,233 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Varela Round";
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 2fr 5fr;
-  padding: 40px;
-  margin-top: 10px;
+body {
+background-color: #f6ffff;
 }
 
-.container-form {
+
+h1 {
+font-size: clamp(1.5rem, 0.5rem + 4vw, 4rem);
+}
+section>div
+{
+  margin: 30px;
+  text-align: center;
+}
+
+
+.candles {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  width: 100%;
-}
-
-
-.container-img {
-  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-img {
+.img-container {
+  position: relative;
   width: 100%;
-  max-width: 435px;
-}
-
-.form {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.form-title {
-  font: normal normal 900 66px/97px Heebo;
-  color: #FDBD03;
-}
-
-.form-text {
-  font: normal normal normal 20px/29px Heebo;
-  text-align: justify;
-}
-
-.form-control {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-control>label {
-  font: normal normal bold 16px/24px Heebo;
-  color: #2c2c2c;
-}
-
-.form-control>input,
-textarea {
-  height: 50px;
-  background: #E5EEFF 0% 0% no-repeat padding-box;
-  border: 0px;
-  border-bottom: 4px solid #FDBD03;
-  font: normal normal normal 20px/29px Heebo;
-}
-
-.form-control>textarea {
-  height: 100px;
-  resize: none;
-}
-
-.form>button {
-  width: 166px;
-  height: 50px;
-  border: 0px;
-  background: #FDBD03 0% 0% no-repeat padding-box;
-  font: normal normal bold 22px/30px Heebo;
-  letter-spacing: 0.33px;
-  color: #ffffff;
-  margin-top: 15px;
-  transition: font 0.3s ease-in-out;
-}
-
-form>button:hover {
-  font: normal normal bold 28px/37px Heebo;
-}
-
-i {
-  background-color: #FDBD03;
-  border-radius: 50%;
-  padding: 20px;
-  font-size: 2em;
+  max-width: 450px;
+  height: 450px;
   margin: 10px;
-  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
 }
 
-i:hover {
-  background-color: #af8300;
+.img-container img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-.icons {
-  text-align: left;
-  margin: 40px;
-  grid-column: span 2;
-}
-
-.whatsapp {
+.overlay {
   position: absolute;
-  left: 50px;
-  top: 50px;
-}
-
-.decorative-rectangle-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 18%;
-  height: 18px;
-  background-color: #FDBD03;
-}
-
-.decorative-rectangle-bottom {
-  position: fixed;
   bottom: 0;
   left: 0;
-  width: 55%;
-  height: 18px;
-  background-color: #FDBD03;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.281);
+  clip-path: polygon(40px 0%, 100% 0%, 100% 100%, 0% 100%);
+  color: white;
+  text-align: right;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
+.img-container:hover .overlay {
+  opacity: 1;
+}
 
-@media (max-width: 1200px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    padding-bottom: 40px;
-  }
-
-  .container-img {
-    width: 80px;
-    margin: 50px;
-    margin-bottom: 70px;
-  }
-
-  .whatsapp {
-    display: none;
-    visibility: hidden;
-  }
-
-  .form-title {
-    font: normal normal 900 40px/59px Heebo;
-    text-align: center;
-  }
-
-  .form-text {
-    font: normal normal normal 15px/22px Heebo;
-    text-align: center;
-  }
-
-  .form-control>label {
-    font: normal normal bold 10px/14px Heebo;
-  }
-
-  .form-control>input,
-  .form>button,
-  textarea {
-    width: 100%;
-    padding: 0 10px;
-    height: 40px;
-  }
-
-  .form>button {
-    font: normal normal bold 15px/21px Heebo;
-  }
-
-  form>button:hover {
-    font: normal normal bold 20px/27px Heebo;
-  }
-
-  .form-control>input,
-  textarea {
-    font: normal normal normal 15px/22px Heebo;
-  }
-
-  .form {
-    width: 100%;
-    padding: 0 43px;
-    display: flex;
-  }
-
-  .container-form {
-    height: 50vh;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1em;
-  }
-
-  i {
-    font-size: 1em;
-  }
-
-  .icons {
-    text-align: center;
-    margin: 0px;
-    margin-top: 80px
-  }
-
-  .decorative-rectangle-top {
-    width: 85%;
-  }
-
-  .decorative-rectangle-bottom {
-    width: 100%;
-  }
-
+.img-container:hover img {
+  transform: scale(1.1);
 
 }

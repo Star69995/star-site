@@ -62,7 +62,7 @@
             <div class="projects">
 
                 <div class="imgContainer">
-                    <a href="intermediate.html?page=Coffee/index.html&title=קפה&description=דף נחיתה">
+                    <a href="Coffee/index.html">
                         <img src="Coffee/images/Coffee.png" alt="coffee">
                         <h3>קפה</h3>
                         <p>דף נחיתה</p>
@@ -143,8 +143,8 @@
         <p>נבנה, עוצב וצויר על ידי <b>סטאר</b>.</p>
     </div>
 
-    <script>
-        // Function to encode URL parameters
+<script>
+    // Function to encode URL parameters
         function encodeParams(params) {
             return new URLSearchParams(params).toString();
         }
@@ -157,30 +157,35 @@
                 projectsContainer.innerHTML = ''; // Clear any existing content
 
                 data.projects.forEach(project => {
-                    // Build the page link dynamically
+                    // Build the page link dynamically with image
                     const params = {
                         page: project.path,
                         title: project.title,
-                        description: project.description
+                        description: project.description,
+                        image: project.image  // Include image in URL
                     };
                     const pageLink = `intermediate.html?${encodeParams(params)}`;
 
+                    // Create project HTML without the download link
                     const projectHTML = `
-          <div class="imgContainer">
-            <a href="${pageLink}">
-              <img src="${project.image}" alt="${project.title}">
-              <h3>${project.title}</h3>
-              <p>${project.description}</p>
-            </a>
-          </div>
-        `;
+        <div class="imgContainer">
+          <a href="${pageLink}">
+            <img src="${project.image}" alt="${project.title}">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+          </a>
+        </div>
+      `;
 
                     // Append the project to the container
                     projectsContainer.innerHTML += projectHTML;
                 });
             })
             .catch(error => console.error('Error fetching the project data:', error));
-    </script>
+
+</script>
+
+
 
 </body>
 

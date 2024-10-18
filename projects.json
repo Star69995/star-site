@@ -4,25 +4,37 @@
             "title": "קפה",
             "description": "דף נחיתה",
             "image": "Coffee/images/Coffee.png",
-            "path": "Coffee/index.html"
+            "path": "Coffee/index.html",
+            "zip": "Coffee.zip"
         },
         {
             "title": "גריד",
             "description": "דף נחיתה",
             "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
-            "path": "gallery/index.html"
+            "path": "gallery/index.html",
+            "zip": "gallery.zip"
         },
         {
             "title": "הדרך קדימה",
             "description": "דף נחיתה",
             "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
-            "path": "forward/index.html"
+            "path": "forward/index.html",
+            "zip": "forward.zip"
         },
         {
             "title": "דף נחיתה צהוב",
             "description": "דף נחיתה",
             "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
-            "path": "icons page/index.html"
+            "path": "icons page/index.html",
+            "zip": "icons page.zip"
+        }
+        ,
+        {
+            "title": "מצב הרוח כנר",
+            "description": "דף נחיתה",
+            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "path": "candle/index.html",
+            "zip": "candle.zip"
         }
     ]
 }

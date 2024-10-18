@@ -41,39 +41,46 @@
             <h1 id="pageTitle">דף ביניים</h1>
             <p id="pageDescription">הכנה לדף</p>
             <button><a id="pageLink" href="#">מעבר לדף</a></button>
-            <button><a id="downloadLink" href="#" download>הורד את הדף</a></button>
+            <button><a id="downloadLink" href="#" download>הורד את הפרויקט</a></button>
         </div>
         <div class="strip icons" id="langs">
             <i class="fa-brands fa-html5" title="HTML"></i>
             <i class="fa-brands fa-css3-alt" title="CSS"></i>
         </div>
         <div class="strip">
-            <img id="pageImage" src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg">
+            <img id="pageImage" src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="Project Image">
         </div>
     </section>
     <div class="footer">
         <p>נבנה, עוצב וצויר על ידי <b>סטאר</b>.</p>
     </div>
 
-    <script>
-        // Get the URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const page = urlParams.get('page');
-        const title = urlParams.get('title');
-        const description = urlParams.get('description');
-        const image = urlParams.get('image');
+<script>
+    // Get the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get('page');
+    const title = urlParams.get('title');
+    const description = urlParams.get('description');
+    const image = urlParams.get('image');  // Get the image parameter
 
-        // Set the dynamic content
-        document.getElementById('pageTitle').innerText = title;
-        document.getElementById('pageDescription').innerText = description;
-        document.getElementById('pageLink').href = page;
-        document.getElementById('downloadLink').href = page;
+    // Set the dynamic content
+    document.getElementById('pageTitle').innerText = title;
+    document.getElementById('pageDescription').innerText = description;
+    document.getElementById('pageLink').href = page;
+    document.getElementById('pageImage').src = image;  // Set the image src
 
-        // Set the dynamic image if provided
-        if (image) {
-            document.getElementById('pageImage').src = image;
-        }
-    </script>
+    // Fetch the JSON file to get the zip file link
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(data => {
+            const project = data.projects.find(p => p.path === page);
+            if (project) {
+                document.getElementById('downloadLink').href = project.zip;
+            }
+        })
+        .catch(error => console.error('Error fetching project data:', error));
+</script>
+
 </body>
 
 </html>
