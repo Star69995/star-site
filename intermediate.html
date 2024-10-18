@@ -6,18 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>דף ביניים</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        section {
+            justify-content: start;
+        }
+
+        .strip img {
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 20px;
+        }
+
+        button {
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
-        <nav>
-            <ul class="horizontalNav">
-                <li><a href="#">התיק שלי</a></li>
-                <li><a href="#about">עליי</a></li>
-                <li><a href="#langs">השפות שלי</a></li>
-                <li><a href="#projects">תיק העבודות שלי</a></li>
-                <li><a href="#">צרו קשר</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul class="horizontalNav">
+            <li><a href="index.html">התיק שלי</a></li>
+        </ul>
+    </nav>
 
 
     <section>
@@ -27,7 +43,17 @@
             <button><a id="pageLink" href="#">מעבר לדף</a></button>
             <button><a id="downloadLink" href="#" download>הורד את הדף</a></button>
         </div>
+        <div class="strip icons" id="langs">
+            <i class="fa-brands fa-html5" title="HTML"></i>
+            <i class="fa-brands fa-css3-alt" title="CSS"></i>
+        </div>
+        <div class="strip">
+            <img id="pageImage" src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg">
+        </div>
     </section>
+    <div class="footer">
+        <p>נבנה, עוצב וצויר על ידי <b>סטאר</b>.</p>
+    </div>
 
     <script>
         // Get the URL parameters
@@ -35,12 +61,18 @@
         const page = urlParams.get('page');
         const title = urlParams.get('title');
         const description = urlParams.get('description');
+        const image = urlParams.get('image');
 
         // Set the dynamic content
         document.getElementById('pageTitle').innerText = title;
         document.getElementById('pageDescription').innerText = description;
         document.getElementById('pageLink').href = page;
         document.getElementById('downloadLink').href = page;
+
+        // Set the dynamic image if provided
+        if (image) {
+            document.getElementById('pageImage').src = image;
+        }
     </script>
 </body>
 

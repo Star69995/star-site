@@ -125,6 +125,7 @@ select {
 }
 
 button {
+    
     color: rgb(255, 255, 255);
     background-color: rgb(90, 0, 194);
     font-family: "Varela Round";
@@ -138,6 +139,8 @@ button {
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999999;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 button:hover {
@@ -241,7 +244,7 @@ i:hover {
     background-color: white;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
@@ -264,13 +267,14 @@ a{
 .form-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-top: 0px;
 }
 
 .form-container img {
-    /* width: 400px; */
-    height: 400px;
+    width: 100%;
+    max-width: 400px;
     object-fit: contain;
-
+    margin: 0 auto;
 }
 
 form {
@@ -278,30 +282,51 @@ form {
     flex-direction: column;
     gap: 15px;
     width: 100%;
+    max-width: 400px;
     text-align: right;
+    margin: 0 auto;
 }
 
 .form-control {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
+
 }
 
 form label {
     font-weight: bold;
-    
+    color: #3d1c59;
 }
 
 form input,
 form textarea {
-    text-align:right ;
+    text-align: right;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     width: 100%;
     resize: none;
+
+
+    height: 50px;
+    background: #fcfcfc 0% 0% no-repeat padding-box;
+    border: 0;
+    border-bottom: 4px solid #020253;
 }
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    width: fit-content;
+
+}
+
+
+
+
 
 
 
@@ -317,6 +342,24 @@ form textarea {
     }
 }
 
+@media (max-width: 800px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container img {
+        grid-row-start: 1;
+        /* grid-row-end: 1; */
+        /* grid-column-start: 1;
+        grid-column-end: 1; */
+    }
+
+
+    form {
+        width: 100%;
+
+    }
+}
 
 /* For small screens like mobile devices */
 @media (max-width: 768px) {

@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "title": "קפה",
+            "description": "דף נחיתה",
+            "image": "Coffee/images/Coffee.png",
+            "path": "Coffee/index.html"
+        },
+        {
+            "title": "גריד",
+            "description": "דף נחיתה",
+            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "path": "gallery/index.html"
+        },
+        {
+            "title": "הדרך קדימה",
+            "description": "דף נחיתה",
+            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "path": "forward/index.html"
+        },
+        {
+            "title": "דף נחיתה צהוב",
+            "description": "דף נחיתה",
+            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "path": "icons page/index.html"
+        }
+    ]
+}
