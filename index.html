@@ -19,7 +19,7 @@
             <li><a href="#about">עליי</a></li>
             <li><a href="#langs">השפות שלי</a></li>
             <li><a href="#projects">תיק העבודות שלי</a></li>
-            <li><a href="#">צרו קשר</a></li>
+            <li><a href="#contact">צרו קשר</a></li>
         </ul>
     </nav>
 
@@ -53,7 +53,7 @@
         </div>
 
 
-        <div class="strip stars" id="projects">
+        <section class="strip stars" id="projects">
             <div>
                 <h2>עבודות HTML ו-CSS</h2>
             </div>
@@ -62,47 +62,80 @@
             <div class="projects">
 
                 <div class="imgContainer">
-                    <a href="intermediate.html?page=Coffee/index.html&title=קפה&description=דף נחיתה" target="_blank"
-                        rel="noopener noreferrer">
+                    <a href="intermediate.html?page=Coffee/index.html&title=קפה&description=דף נחיתה">
                         <img src="Coffee/images/Coffee.png" alt="coffee">
+                        <h3>קפה</h3>
+                        <p>דף נחיתה</p>
                     </a>
-                    <h3>קפה</h3>
-                    <p>דף נחיתה</p>
                 </div>
 
                 <div class="imgContainer">
-                    <a href="gallery/index.html" target="_blank" rel="noopener noreferrer">
+                    <a href="gallery/index.html">
                         <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                        <h3>גריד</h3>
+                        <p>דף נחיתה</p>
                     </a>
-                    <h3>גריד</h3>
-                    <p>דף נחיתה</p>
                 </div>
                 <div class="imgContainer">
-                    <a href="forward/index.html" target="_blank" rel="noopener noreferrer">
+                    <a href="forward/index.html">
                         <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                        <h3>הדרך קדימה</h3>
+                        <p>דף נחיתה</p>
                     </a>
-                    <h3>הדרך קדימה</h3>
-                    <p>דף נחיתה</p>
                 </div>
                 <div class="imgContainer">
-                    <a href="icons page/index.html" target="_blank" rel="noopener noreferrer">
+                    <a href="icons page/index.html">
                         <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                        <h3>דף נחיתה צהוב</h3>
+                        <p>דף נחיתה</p>
                     </a>
-                    <h3>דף נחיתה צהוב</h3>
-                    <p>דף נחיתה</p>
                 </div>
 
 
                 <div class="imgContainer">
                     <a href="#">
                         <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                        <h3>פרויקט</h3>
+                        <p>דף נחיתה</p>
                     </a>
-                    <h3>פרויקט</h3>
-                    <p>דף נחיתה</p>
                 </div>
 
             </div>
+        </section>
+
+        <div class="strip form-container">
+            
+            
+
+            <form action="#" method="post">
+                <h2 id="contact">צרו קשר</h2>
+                <p>רוצים אתר משלכם? השאירו פרטים.</p>
+
+                <div class="form-control">
+                    <label for="name">שם מלא</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-control">
+                    <label for="email">דוא"ל</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-control">
+                    <label for="phone">טלפון</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-control">
+                    <label for="message">הודעה</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">שליחה</button>
+            </form>
+            <img src="img/letter.png">
         </div>
+
 
         <div class="footer">
             <p>נבנה, עוצב וצויר על ידי <b>סטאר</b>.</p>
