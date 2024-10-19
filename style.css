@@ -10,17 +10,6 @@
     scroll-behavior: smooth;
 }
 
-/* nav {
-    background-color: #5e2c8a;
-    opacity: 0.9;
-    position: sticky;
-    top: 0;
-    max-width: 700px;
-    margin: 0 auto;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-} */
-
 nav {
     background-color: #5e2c8a;
     opacity: 1;
@@ -50,10 +39,7 @@ li a {
     text-decoration: none;
 }
 
-/* .active {
-    background-color: #9045d1;
-} */
-li a:hover:not(.active) {
+li a:hover {
     background-color: #3d1c59;
 }
 
@@ -119,8 +105,13 @@ select {
 
 }
 
-button {
-    
+.button {
+    display: inline-block;
+}
+
+button,
+.button {
+
     color: rgb(255, 255, 255);
     background-color: rgb(90, 0, 194);
     font-family: "Varela Round";
@@ -138,7 +129,8 @@ button {
     padding-right: 30px;
 }
 
-button:hover {
+button:hover,
+.button:hover {
     background-color: rgb(80, 36, 102)
 }
 
@@ -173,7 +165,7 @@ span {
     font-weight: bold;
 }
 
-.footer {
+footer {
     padding: 0px;
     font-size: 0.7em;
     margin: 0px;
@@ -200,19 +192,27 @@ span {
     background-color: rgb(237, 216, 255);
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
     align-self: center;
-    margin: 0px;
+    margin: 10px;
+
+
+
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+
+.imgContainer p {
+/* width: 40%; */
 }
 
 .imgContainer img {
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
-    max-height: 300px;
+    /* border-top-left-radius: 45px;
+    border-top-right-radius: 45px;*/
+    max-height: 300px; 
 }
 
-button a {
-    color: white;
-    text-decoration: none;
-}
 
 i {
     background-color: #b6b1ff;
@@ -324,8 +324,6 @@ form button {
 
 
 
-
-
 @media (max-width: 1200px) {
 
     h2,
@@ -357,16 +355,12 @@ form button {
 }
 
 /* For small screens like mobile devices */
-@media (max-width: 768px) {
-    .projects {
-        flex-direction: column;
-        gap: 10px;
-    }
+@media (max-width: 600px) {
 
-    .imgContainer img {
-        width: 100%;
-        /* Make images full width of the container */
+.imgContainer{
         max-width: 300px;
-        /* Limit maximum size */
+}
+    .imgContainer img {
+        max-width: 300px;
     }
 }

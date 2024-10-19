@@ -1,40 +1,53 @@
 {
     "projects": [
         {
+            "title": "מצב הרוח כנר",
+            "description": "פרויקט שלי: גלריית תמונות רספונסיבית עם כיתוב משעשע",
+            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "path": "candle/index.html",
+            "zip": "candle.zip"
+        },
+        {
+            "title": "גופנים מגניבים",
+            "description": "פרויקט שלי: התנסו בגופנים שונים, חלקם אני יצרתי וחלקם מגוגל פונטס",
+            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "path": "typography/index.html",
+            "zip": "typography.zip"
+        },
+        {
             "title": "קפה",
-            "description": "דף נחיתה",
+            "description": "עמוד להשארת פרטים (שם מלא ואימייל)",
             "image": "Coffee/images/Coffee.png",
             "path": "Coffee/index.html",
             "zip": "Coffee.zip"
         },
         {
             "title": "גריד",
-            "description": "דף נחיתה",
+            "description": "עמוד להשארת פרטים (שם מלא, אימייל והודעת טקסט)",
             "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
             "path": "gallery/index.html",
             "zip": "gallery.zip"
         },
         {
             "title": "הדרך קדימה",
-            "description": "דף נחיתה",
+            "description": "עמוד להשארת פרטים (שם מלא ואימייל)",
             "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
             "path": "forward/index.html",
             "zip": "forward.zip"
         },
         {
             "title": "דף נחיתה צהוב",
-            "description": "דף נחיתה",
+            "description": "עמוד להשארת פרטים (שם מלא ואימייל)",
             "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
             "path": "icons page/index.html",
             "zip": "icons page.zip"
-        }
-        ,
+        },
         {
-            "title": "מצב הרוח כנר",
-            "description": "דף נחיתה",
+            "title": "דף  ",
+            "description": " sefklk klsdhf  skldhfl lskdfh l lsdhf l skdhflks dlf sfjldk hsldkhfls dfl   sflhsdflshfעמוד להשארת פרטים (שם מלא ואימייל)",
             "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
-            "path": "candle/index.html",
-            "zip": "candle.zip"
+            "path": "icons page/index.html",
+            "zip": "icons page.zip"
         }
     ]
 }

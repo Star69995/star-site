@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=David&family=Assistant&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+@font-face {
+    font-family: 'Stars-Regular';
+    src: url('fonts/Stars-Regular.otf') format('opentype');
+
+}
+
+@font-face {
+    font-family: 'Butterfly-Regular';
+    src: url('fonts/Butterfly-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Stars-for-coloring-Regular';
+    src: url('fonts/Stars_for_coloring-Regular.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Stars-Bold';
+    src: url('fonts/Stars-Bold.otf') format('opentype');
+
+}
+
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --accent-color: #4a90e2;
+    --card-bg: rgba(255, 255, 255, 0.308);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Varela Round";
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.507);
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.content {
+    margin: 20px;
+
+}
+
+section {
+    position: relative;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px;
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+textarea {
+    font-size: 4rem;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    resize: none;
+}
+
+.stars {
+    font-family: 'Stars-Regular';
+}
+
+.stars-bold {
+    font-family: 'Stars-Bold';
+}
+
+.stars-coloring {
+    font-family: 'Stars-for-coloring-Regular';
+}
+
+.butterfly {
+    font-family: 'Butterfly-Regular';
+}
+
+.amatic-sc {
+    font-family: 'Amatic SC';
+}
+
+.Rubik-Bubbles {
+    font-family: 'Rubik Bubbles';
+}
+
+.Rubik-Dirt {
+    font-family: 'Rubik Dirt';
+}
+
+.Rubik-Glitch-Pop {
+    font-family: 'Rubik Glitch Pop';
+}
+
+.Rubik-Marker-Hatch {
+    font-family: 'Rubik Marker Hatch';
+}
+
+.Handjet {
+    font-family: 'Handjet';
+}
+
+.Solitreo {
+    font-family: 'Solitreo';
+}
+
+.Noto-Rashi-Hebrew {
+    font-family: 'Noto Rashi Hebrew';
+}
+
+.english h3{
+    text-align: left;
+}
