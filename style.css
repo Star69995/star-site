@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Varela Round";
-    scroll-margin-top: 70px;
+    scroll-margin-top: 90px;
     scroll-behavior: smooth;
 }
 
@@ -17,18 +17,29 @@ nav {
     top: 0;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
-
-
-
-
 
 .horizontalNav {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontalNav.left {
+    justify-content: flex-start;
+}
+
+.horizontalNav.right {
+    justify-content: flex-end;
 }
 
 li a {
@@ -43,8 +54,33 @@ li a:hover {
     background-color: #3d1c59;
 }
 
+nav img {
+    height: 40px;
+}
+
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    padding: 14px 16px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+
+
+
+
+html,
 body {
+    width: 100%;
     background-color: rgb(243, 240, 250);
+
 }
 
 .stars {
@@ -190,9 +226,9 @@ footer {
     border-radius: 50px;
     text-align: center;
     background-color: rgb(237, 216, 255);
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
     align-self: center;
-    margin: 10px;
+    margin: 20px;
 
 
 
@@ -200,17 +236,17 @@ footer {
     border-top-right-radius: 45px;
     max-width: 500px;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-
-.imgContainer p {
-/* width: 40%; */
+.imgContainer:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
 }
+
 
 .imgContainer img {
-    /* border-top-left-radius: 45px;
-    border-top-right-radius: 45px;*/
-    max-height: 300px; 
+    max-height: 300px;
 }
 
 
@@ -227,9 +263,8 @@ i {
 }
 
 i:hover {
-    /* background-color: #8b87c4; */
-    /* font-size: 20px; */
     color: #008cff;
+    cursor: help;
 }
 
 .icons {
@@ -342,9 +377,6 @@ form button {
 
     .form-container img {
         grid-row-start: 1;
-        /* grid-row-end: 1; */
-        /* grid-column-start: 1;
-        grid-column-end: 1; */
     }
 
 
@@ -356,11 +388,44 @@ form button {
 
 /* For small screens like mobile devices */
 @media (max-width: 600px) {
+    * {
+        scroll-margin-top: 200px;
+    }
 
-.imgContainer{
+    .imgContainer {
         max-width: 300px;
-}
+    }
+
     .imgContainer img {
         max-width: 300px;
+    }
+
+    .horizontalNav {
+        display: none;
+        /* Hide nav by default on mobile */
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .menu-icon {
+        display: block;
+        /* Show the toggle icon on mobile */
+
+    }
+
+    li a {
+        border-radius: 20px;
+    }
+
+    /* When the checkbox is checked, show the menu */
+    .menu-toggle:checked+.menu-icon+.horizontalNav {
+        display: flex;
+    }
+
+    .horizontalNav.right {
+        flex-direction: row;
+        display: flex;
+        justify-content: flex-end;
     }
 }

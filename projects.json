@@ -3,42 +3,42 @@
         {
             "title": "מצב הרוח כנר",
             "description": "פרויקט שלי: גלריית תמונות רספונסיבית עם כיתוב משעשע",
-            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "image": "img/candle.png",
             "path": "candle/index.html",
             "zip": "candle.zip"
         },
         {
             "title": "גופנים מגניבים",
             "description": "פרויקט שלי: התנסו בגופנים שונים, חלקם אני יצרתי וחלקם מגוגל פונטס",
-            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "image": "img/fonts.png",
             "path": "typography/index.html",
             "zip": "typography.zip"
         },
         {
             "title": "קפה",
             "description": "עמוד להשארת פרטים (שם מלא ואימייל)",
-            "image": "Coffee/images/Coffee.png",
+            "image": "img/coffee.png",
             "path": "Coffee/index.html",
             "zip": "Coffee.zip"
         },
         {
             "title": "גריד",
             "description": "עמוד להשארת פרטים (שם מלא, אימייל והודעת טקסט)",
-            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "image": "img/grid.png",
             "path": "gallery/index.html",
             "zip": "gallery.zip"
         },
         {
             "title": "הדרך קדימה",
             "description": "עמוד להשארת פרטים (שם מלא ואימייל)",
-            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "image": "img/forward.png",
             "path": "forward/index.html",
             "zip": "forward.zip"
         },
         {
             "title": "דף נחיתה צהוב",
             "description": "עמוד להשארת פרטים (שם מלא ואימייל)",
-            "image": "https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg",
+            "image": "img/yellow.png",
             "path": "icons page/index.html",
             "zip": "icons page.zip"
         }
