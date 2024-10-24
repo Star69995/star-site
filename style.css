@@ -373,7 +373,6 @@ form button {
     .projects {
         margin-left: calc((100vw - (400px * 4 )) / 2);
         margin-right: calc((100vw - (400px * 4 )) / 2);
-        /* border: #020253 2px solid; */
     }
 
 }
