@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+:root {
+    --primary-color: #5e2c8a;
+    /* --secondary-color: #f1faee;
+    --third-color: #a8dadc;
+    --fourth-color: #457b9d;
+    --fifth-color: #1d3557; */
+    --nav-height: 60px;
+    --strip-color: rgb(237, 216, 255)
+}
 
 * {
     margin: 0;
@@ -11,18 +20,18 @@
 }
 
 nav {
-    background-color: #5e2c8a;
+    background-color: var(--primary-color);
     opacity: 1;
     position: sticky;
     top: 0;
     width: 100%;
+    height: var(--nav-height);
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px;
     z-index: 10;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .horizontalNav {
@@ -36,18 +45,27 @@ nav {
 
 .horizontalNav.left {
     justify-content: flex-start;
+
 }
 
 .horizontalNav.right {
     justify-content: flex-end;
 }
 
+li {
+    height: var(--nav-height);
+}
+
 li a {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    height: var(--nav-height);
+
 }
 
 li a:hover {
@@ -56,6 +74,12 @@ li a:hover {
 
 nav img {
     height: 40px;
+}
+
+nav .right li a {
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
 
@@ -112,7 +136,7 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -128,7 +152,10 @@ p {
     margin: 0;
 }
 
-
+#about img {
+    border-radius: 50%;
+    width: 150px;
+}
 
 
 
@@ -185,17 +212,6 @@ h1 {
     margin: 20px;
 }
 
-.stars h2 {
-    background-color: rgba(200, 219, 255, 0.589);
-    display: inline;
-    padding: 20px;
-    border-radius: 100px;
-}
-
-.stars>div:first-child {
-
-    margin-bottom: 40px;
-}
 
 span {
     font-weight: bold;
@@ -208,7 +224,9 @@ footer {
 
 }
 
-
+.darker {
+    background-color: rgb(212, 193, 228);
+}
 
 
 
@@ -220,7 +238,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     padding: 0px;
     padding-bottom: 40px;
     border-radius: 50px;
@@ -228,13 +245,11 @@ footer {
     background-color: rgb(237, 216, 255);
     box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
     align-self: center;
-    margin: 20px;
-
 
 
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
-    max-width: 500px;
+    max-width: 400px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -246,7 +261,7 @@ footer {
 
 
 .imgContainer img {
-    max-height: 300px;
+    max-height: 220px;
 }
 
 
@@ -274,25 +289,24 @@ i:hover {
     background-color: white;
 }
 
+
+.project-icons i {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    background-color: var(--strip-color);
+    margin: 0;
+
+}
+
+
+
 a {
     text-decoration: none;
     color: black;
 }
 
 
-
-/* .divider-container {
-    padding-bottom: 0px;
-    overflow: hidden;
-}
-
-
-.divider {
-    width: 100vw;
-    height: auto;
-    margin: -40px;
-    object-fit: fill;
-} */
 
 .form-container {
     display: grid;
@@ -334,7 +348,6 @@ form textarea {
     text-align: right;
     padding: 10px;
     border-radius: 5px;
-    /* border: 1px solid #ccc; */
     width: 100%;
     resize: none;
 
@@ -356,6 +369,14 @@ form button {
 
 
 
+@media (min-width: 1800px) {
+    .projects {
+        margin-left: calc((100vw - (400px * 4 )) / 2);
+        margin-right: calc((100vw - (400px * 4 )) / 2);
+        /* border: #020253 2px solid; */
+    }
+
+}
 
 
 
@@ -388,6 +409,11 @@ form button {
 
 /* For small screens like mobile devices */
 @media (max-width: 600px) {
+    :root {
+
+        --nav-height: auto;
+    }
+
     * {
         scroll-margin-top: 200px;
     }
@@ -427,5 +453,9 @@ form button {
         flex-direction: row;
         display: flex;
         justify-content: flex-end;
+    }
+
+    nav .right li :hover {
+        background-color: var(--primary-color);
     }
 }

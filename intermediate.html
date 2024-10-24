@@ -30,8 +30,13 @@
 
 <body>
     <nav>
-        <ul class="horizontalNav">
-            <li><a href="index.html">התיק שלי</a></li>
+        <ul class="horizontalNav left">
+        </ul>
+        <ul class="horizontalNav right">
+            <li><a href="index.html">
+                    Star
+                    <img src="img/winged_star.png" alt="סמליל">
+                </a></li>
         </ul>
     </nav>
 
@@ -55,31 +60,59 @@
         <p>נבנה, עוצב וצויר על ידי <b>סטאר</b>.</p>
     </footer>
 
-<script>
-    // Get the URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const page = urlParams.get('page');
-    const title = urlParams.get('title');
-    const description = urlParams.get('description');
-    const image = urlParams.get('image');  // Get the image parameter
+    <script>
 
-    // Set the dynamic content
-    document.getElementById('pageTitle').innerText = title;
-    document.getElementById('pageDescription').innerText = description;
-    document.getElementById('pageLink').href = page;
-    document.getElementById('pageImage').src = image;  // Set the image src
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const page = urlParams.get('page');
+        const title = urlParams.get('title');
+        const description = urlParams.get('description');
+        const image = urlParams.get('image');  // Get the image parameter
+        const languages = urlParams.get('languages') ? urlParams.get('languages').split(',') : [];  // Get languages and split into array
 
-    // Fetch the JSON file to get the zip file link
-    fetch('projects.json')
-        .then(response => response.json())
-        .then(data => {
-            const project = data.projects.find(p => p.path === page);
-            if (project) {
-                document.getElementById('downloadLink').href = project.zip;
+        // Set the dynamic content
+        document.getElementById('pageTitle').innerText = title;
+        document.getElementById('pageDescription').innerText = description;
+        document.getElementById('pageLink').href = page;
+        document.getElementById('pageImage').src = image;  // Set the image src
+
+        // Function to generate language icons
+        function getLanguageIcon(language) {
+            switch (language.toLowerCase()) {
+                case 'html':
+                    return '<i class="fa-brands fa-html5" title="HTML"></i>';
+                case 'css':
+                    return '<i class="fa-brands fa-css3-alt" title="CSS"></i>';
+                case 'javascript':
+                    return '<i class="fa-brands fa-js" title="JavaScript"></i>';
+                case 'python':
+                    return '<i class="fa-brands fa-python" title="Python"></i>';
+                case 'react':
+                    return '<i class="fa-brands fa-react" title="React"></i>';
+                default:
+                    return '';
             }
-        })
-        .catch(error => console.error('Error fetching project data:', error));
-</script>
+        }
+
+        // Display language icons
+        const iconsContainer = document.getElementById('langs');
+        iconsContainer.innerHTML = '';  // Clear any existing content
+        languages.forEach(language => {
+            iconsContainer.innerHTML += getLanguageIcon(language);
+        });
+
+        // Fetch the JSON file to get the zip file link
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const project = data.projects.find(p => p.path === page);
+                if (project) {
+                    document.getElementById('downloadLink').href = project.zip;
+                }
+            })
+            .catch(error => console.error('Error fetching project data:', error));
+
+    </script>
 
 </body>
 
