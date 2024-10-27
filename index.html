@@ -123,7 +123,9 @@
 
     </section>
     <footer>
-        <p>נבנה, עוצב וצויר על ידי <b>סטאר</b>.</p>
+<p>נבנה, עוצב וצויר על ידי <b>סטאר</b>, כל הזכויות שמורות 2024.</p>
+
+
     </footer>
 
     <script>
@@ -133,22 +135,22 @@
         }
 
         function getLanguageIcon(language) {
-                switch (language.toLowerCase()) {
-                    case 'html':
-                        return '<i class="fa-brands fa-html5" title="HTML"></i>';
-                    case 'css':
-                        return '<i class="fa-brands fa-css3-alt" title="CSS"></i>';
-                    case 'javascript':
-                        return '<i class="fa-brands fa-js" title="JavaScript"></i>';
-                    case 'python':
-                        return '<i class="fa-brands fa-python" title="Python"></i>';
-                    case 'react':
-                        return '<i class="fa-brands fa-react" title="React"></i>';
-                    // Add more cases as needed for other languages
-                    default:
-                        return '';
-                }
+            switch (language.toLowerCase()) {
+                case 'html':
+                    return '<i class="fa-brands fa-html5" title="HTML"></i>';
+                case 'css':
+                    return '<i class="fa-brands fa-css3-alt" title="CSS"></i>';
+                case 'javascript':
+                    return '<i class="fa-brands fa-js" title="JavaScript"></i>';
+                case 'python':
+                    return '<i class="fa-brands fa-python" title="Python"></i>';
+                case 'react':
+                    return '<i class="fa-brands fa-react" title="React"></i>';
+                // Add more cases as needed for other languages
+                default:
+                    return '';
             }
+        }
 
         // Fetch the JSON data and populate the projects section
         fetch('projects.json')
