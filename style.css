@@ -2,10 +2,6 @@
 
 :root {
     --primary-color: #5e2c8a;
-    /* --secondary-color: #f1faee;
-    --third-color: #a8dadc;
-    --fourth-color: #457b9d;
-    --fifth-color: #1d3557; */
     --nav-height: 60px;
     --strip-color: rgb(237, 216, 255)
 }
@@ -155,8 +151,12 @@ p {
 #about img {
     border-radius: 50%;
     width: 150px;
+    transition: all 0.3s ease-in-out;
 }
 
+#about img:hover {
+    scale: 1.10;
+}
 
 
 input,
@@ -371,8 +371,8 @@ form button {
 
 @media (min-width: 1800px) {
     .projects {
-        margin-left: calc((100vw - (400px * 4 )) / 2);
-        margin-right: calc((100vw - (400px * 4 )) / 2);
+        margin-left: calc((100vw - (400px * 4)) / 2);
+        margin-right: calc((100vw - (400px * 4)) / 2);
     }
 
 }
