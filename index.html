@@ -128,6 +128,29 @@
     </footer>
 
     <script>
+        // JavaScript to toggle text display on click
+        document.querySelectorAll('#langs i').forEach(icon => {
+            icon.addEventListener('click', (event) => {
+                // Prevent the event from bubbling up to the document click event
+                event.stopPropagation();
+
+                // Remove any existing description spans
+                document.querySelectorAll('.icon-text').forEach(text => text.remove());
+
+                // Create a new description span and set its text
+                const textSpan = document.createElement('span');
+                textSpan.classList.add('icon-text');
+                textSpan.innerText = icon.getAttribute('title');
+
+                // Insert the span after the icon
+                icon.parentNode.insertBefore(textSpan, icon.nextSibling);
+            });
+        });
+
+        // Hide text when clicking outside of icons
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.icon-text').forEach(text => text.remove());
+        });
         // Function to get the icon HTML for each language
         function getLanguageIcon(language) {
             switch (language.toLowerCase()) {

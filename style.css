@@ -276,6 +276,22 @@ i {
     margin-right: 10px;
     transition: all 0.3s ease-in-out;
 }
+/* CSS for the text span */
+.icon-text {
+    position: absolute;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 5px 8px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    transform: translate(-30%, 50px);
+    /* Center horizontally and slightly below */
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 10;
+}
 
 i:hover {
     color: #008cff;
