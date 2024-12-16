@@ -1,11 +1,11 @@
 {
-    "projects": [
+    "css-projects": [
         {
             "title": "מצב הרוח כנר",
             "description": "גלריית תמונות רספונסיבית עם אפקטים ייחודיים וכיתוב משעשע, המאפשרת חווית צפייה קלילה ומהנה. נבנה בעזרת HTML ו-CSS, מתאים לכל סוגי המסכים.",
             "image": "img/candle.webp",
-            "path": "candle/index.html",
-            "zip": "candle.zip",
+            "path": "css-projects/candle/",
+            "zip": "css-projects/candle.zip",
             "languages": [
                 "HTML",
                 "CSS"
@@ -15,8 +15,8 @@
             "title": "גופנים מגניבים",
             "description": "התנסו במבחר גופנים ייחודיים - חלקם בעיצוב אישי וחלקם מ-Google Fonts. פרויקט המדגיש את עוצמת הטיפוגרפיה באמצעות HTML ו-CSS בלבד. מותאם לתצוגה במכשירים ניידים.",
             "image": "img/fonts.webp",
-            "path": "typography/index.html",
-            "zip": "typography.zip",
+            "path": "css-projects/typography/",
+            "zip": "css-projects/typography.zip",
             "languages": [
                 "HTML",
                 "CSS"
@@ -26,8 +26,8 @@
             "title": "קפה",
             "description": "דף השארת פרטים ידידותי למשתמש, שנבנה ב-HTML ו-CSS עם יישום עיצוב מקבצי Adobe XD. מותאם לתצוגה בנייד ובמחשב.",
             "image": "img/coffee.webp",
-            "path": "Coffee/index.html",
-            "zip": "Coffee.zip",
+            "path": "css-projects/Coffee/",
+            "zip": "css-projects/Coffee.zip",
             "languages": [
                 "HTML",
                 "CSS",
@@ -38,8 +38,8 @@
             "title": "גריד",
             "description": "עמוד גריד מודרני לאיסוף פרטים עם שדות נוספים, כולל שם, אימייל והודעת טקסט. נבנה בעזרת HTML ו-CSS עם יישום של עיצוב שהוכן מראש ב-Adobe XD. מותאם לניידים ולמחשבים.",
             "image": "img/grid.webp",
-            "path": "gallery/index.html",
-            "zip": "gallery.zip",
+            "path": "css-projects/gallery/",
+            "zip": "css-projects/gallery.zip",
             "languages": [
                 "HTML",
                 "CSS",
@@ -50,8 +50,8 @@
             "title": "הדרך קדימה",
             "description": "עמוד מרשים להשארת פרטים, המותאם למגוון מסכים. נבנה ב-HTML ו-CSS עם יישום של עיצוב מקובץ Adobe XD קיים.",
             "image": "img/forward.webp",
-            "path": "forward/index.html",
-            "zip": "forward.zip",
+            "path": "css-projects/forward/",
+            "zip": "css-projects/forward.zip",
             "languages": [
                 "HTML",
                 "CSS",
@@ -62,12 +62,127 @@
             "title": "דף נחיתה צהוב",
             "description": "דף נחיתה בולט עם רקע צהוב ועיצוב נוח לשימוש. נבנה ב-HTML ו-CSS בהתבסס על עיצוב שהוכן מראש ב-Adobe XD, ומותאם לנייד ולמחשב.",
             "image": "img/yellow.webp",
-            "path": "icons page/index.html",
-            "zip": "icons page.zip",
+            "path": "css-projects/icons page/",
+            "zip": "css-projects/icons page.zip",
             "languages": [
                 "HTML",
                 "CSS",
                 "Adobe XD"
+            ]
+        }
+    ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "js-projects": [
+        {
+            "title": "שעון עצר",
+            "description": "פרויקט שעון עצר מותאם למכשירים ניידים ובמחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
+            "image": "img/clock.webp",
+            "path": "js-projects/timer/",
+            "zip": "js-projects/timer.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "title": "מנהל משימות",
+            "description": "אפליקציה אינטראקטיבית לניהול רשימות ומשימות, עם שמירה ב-localStorage. מאפשרת הוספה, עריכה ומחיקה של משימות בצורה נוחה.",
+            "image": "img/task-manager.webp",
+            "path": "js-projects/task_manager/",
+            "zip": "js-projects/task_manager.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "title": "תחזית מזג אוויר",
+            "description": "אפליקציה אינטראקטיבית לתחזית מזג אוויר, כולל תחזית שעתית ויומית, בשילוב המלצות לבוש. נבנה באמצעות HTML, CSS ו-JavaScript עם שימוש ב-OpenWeather API.",
+            "image": "img/weather.webp",
+            "path": "js-projects/weather/",
+            "zip": "js-projects/weather.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "OpenWeather API"
+            ]
+        },
+        {
+            "title": "הצפנה ופתרון חידות",
+            "description": "משחק הצפנה בו השחקן צריך לפענח את המילים המוסתרות על ידי קוד. מיועד לשימוש גם בניידים וגם במחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
+            "image": "img/cryptogram.webp",
+            "path": "js-projects/cryptogram/",
+            "zip": "js-projects/cryptogram.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "title": "משחק מתמטי",
+            "description": "משחק חידות מתמטיות לאימון המוח. כולל שלבים שונים ומשימות משתנות. נבנה ב-HTML, CSS ו-JavaScript.",
+            "image": "img/mathGame.webp",
+            "path": "js-projects/mathGame/",
+            "zip": "js-projects/mathGame.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "title": "בונה דפים",
+            "description": "אפליקציה המאפשרת יצירת דפי אינטרנט בצורה אינטראקטיבית. המשתמש יכול לעצב וליצור דפים בקלות. נבנה ב-HTML, CSS ו-JavaScript.",
+            "image": "img/pageBuilder.webp",
+            "path": "js-projects/pageBuilder/",
+            "zip": "js-projects/pageBuilder.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "title": "מחשבון עץ",
+            "description": "מחשבון עץ המאפשר לבצע חישובים בתחום חיתוך עץ. מיועד גם למוביילים וגם למחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
+            "image": "img/wood-calc.webp",
+            "path": "js-projects/wood-calc/",
+            "zip": "js-projects/wood-calc.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript"
             ]
         }
     ]

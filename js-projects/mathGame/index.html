@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משחק חישוב מתקדם</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>משחק חישוב מתקדם</h1>
+                <div id="score-system" class="info-section">
+                    <h2 class="info-title">🏆 מערכת הניקוד</h2>
+                    <p class="info-text">• תשובה נכונה: 10 נקודות × (רצף הצלחות + 1) × רמת הקושי</p>
+                    <p class="info-text">• תשובה שגויה אחרי 3 ניסיונות: מאפסת רצף ההצלחות</p>
+                </div>
+
+        <div class="game-info">
+            <div class="info-item">
+                <span class="info-label">ניקוד</span>
+                <span class="info-value" id="score">0</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">רצף נכון</span>
+                <span class="info-value" id="streak">0</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">תרגילים שגויים</span>
+                <span class="info-value" id="failed">0</span>
+            </div>
+        </div>
+
+
+
+
+        <div class="difficulty-controls">
+            <label for="difficulty">רמת קושי:</label>
+            <select id="difficulty">
+                <option value="easy">קל</option>
+                <option value="medium">בינוני</option>
+                <option value="hard">קשה</option>
+            </select>
+        </div>
+
+        <div class="operation-select">
+            <button class="operation-btn active" data-op="+">חיבור</button>
+            <button class="operation-btn" data-op="-">חיסור</button>
+            <button class="operation-btn" data-op="×">כפל</button>
+            <button class="operation-btn" data-op="÷">חילוק</button>
+        </div>
+
+        <div class="exercise">
+            <span id="num1"></span>
+            <span id="op">+</span>
+            <span id="num2"></span>
+            <span>=</span>
+            <input type="number" id="sum" step="0.1">
+        </div>
+
+
+
+        <div class="buttons">
+            <button id="check">בדוק תשובה</button>
+            <button id="next">תרגיל הבא</button>
+            <button id="reset" class="reset-btn">איפוס ניקוד</button>
+        </div>
+
+        <div id="attempts" class="attempts-counter"></div>
+        <div id="message"></div>
+
+    </div>
+</body>
+
+</html>

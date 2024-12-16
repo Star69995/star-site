@@ -70,8 +70,17 @@
         fetch('projects.json')
             .then(response => response.json())
             .then(data => {
-                // Find the project that matches the path
-                const project = data.projects.find(p => p.path === projectPath);
+                // שמות הקטגוריות שבהן נחפש
+                const categories = ['css-projects', 'js-projects'];
+
+                // חפש את הפרויקט בקטגוריות
+                let project = null;
+                for (const category of categories) {
+                    if (data[category]) {
+                        project = data[category].find(p => p.path === projectPath);
+                        if (project) break; // מצאנו, אין צורך להמשיך
+                    }
+                }
 
                 if (project) {
                     // Set the page title

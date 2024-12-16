@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <title>קריפטוגרמה  </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>קריפטוגרמה  </h1>
+        <div class="game-area">
+            <div id="categoryContainer" class="category"></div>
+
+            <div class="puzzle-container" id="puzzleContainer"></div>
+
+            <div class="controls">
+                <button onclick="showInstructions()">הוראות משחק</button>
+                <button onclick="checkSolution()">בדיקת פתרון</button>
+                <button onclick="getHint()">רמז</button>
+                <button onclick="clearBoard()">ניקוי לוח</button>
+                <button onclick="resetGame()">משחק חדש</button>
+                <button id="toggleKeyboard" onclick="toggleKeyboard()">הסתר מקלדת</button>
+            </div>
+            <div id="message" class="message"></div>
+
+
+
+
+
+        </div>
+    </div>
+    <div id="keyboard">
+        <div class="keyboard-row">
+            <button class="key" onclick="useKey('⌫')">⌫</button>
+            <button class="key" onclick="useKey('פ')">פ</button>
+            <button class="key" onclick="useKey('ם')">ם</button>
+            <button class="key" onclick="useKey('ן')">ן</button>
+            <button class="key" onclick="useKey('ו')">ו</button>
+            <button class="key" onclick="useKey('ט')">ט</button>
+            <button class="key" onclick="useKey('א')">א</button>
+            <button class="key" onclick="useKey('ר')">ר</button>
+            <button class="key" onclick="useKey('ק')">ק</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="key" onclick="useKey('ף')">ף</button>
+            <button class="key" onclick="useKey('ך')">ך</button>
+            <button class="key" onclick="useKey('ל')">ל</button>
+            <button class="key" onclick="useKey('ח')">ח</button>
+            <button class="key" onclick="useKey('י')">י</button>
+            <button class="key" onclick="useKey('ע')">ע</button>
+            <button class="key" onclick="useKey('כ')">כ</button>
+            <button class="key" onclick="useKey('ג')">ג</button>
+            <button class="key" onclick="useKey('ד')">ד</button>
+            <button class="key" onclick="useKey('ש')">ש</button>
+        </div>
+        <div class="keyboard-row">
+            <button class="key" onclick="useKey('ץ')">ץ</button>
+            <button class="key" onclick="useKey('ת')">ת</button>
+            <button class="key" onclick="useKey('צ')">צ</button>
+            <button class="key" onclick="useKey('מ')">מ</button>
+            <button class="key" onclick="useKey('נ')">נ</button>
+            <button class="key" onclick="useKey('ה')">ה</button>
+            <button class="key" onclick="useKey('ב')">ב</button>
+            <button class="key" onclick="useKey('ס')">ס</button>
+            <button class="key" onclick="useKey('ז')">ז</button>
+        </div>
+    </div>
+    <!-- Modal for instructions -->
+    <div id="instructionsModal" class="modal">
+        <div class="modal-content">
+            <div class="close-container"><span class="close" onclick="closeInstructions()">&times;</span></div>
+            <h2>הוראות משחק</h2>
+            <div class="instructions-text">
+                <div class="instructions-text">
+                    <ol>
+                        <li>כל אות במשפט המוצפן (כולל אותיות סופיות) הוחלפה באות אחרת. גלו את המשפט המקורי.</li>
+                        <li>בחרו אות מוצפנת ולחצו על האות שאתם חושבים שהיא נכונה.</li>
+                        <li>האיות שתזינו יחליף את כל המקומות שבהם מופיעה האות המוצפנת.</li>
+                        <li>לחצו על "בדיקת פתרון" לבדוק אם פתרתם נכון.</li>
+                        <li>תקועים? לחצו על "רמז" כדי לחשוף אות נכונה.</li>
+                        <li>לחצו על כפתור 'ניקוי לוח' כדי למחוק מהלוח את כל האותיות שטרם אושרו כנכונות (כלומר, את כל האותיות שלא קיבלו אישור
+                            בבדיקה או דרך רמז).</li>
+                        <li>להתחיל עם משפט חדש? לחצו על "משחק חדש".</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Service Worker Registration
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('ServiceWorker registration successful');
+                        })
+                        .catch(err => {
+                            console.log('ServiceWorker registration failed: ', err);
+                        });
+                });
+            }
+    </script>
+
+</body>
+
+</html>

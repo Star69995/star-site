@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+    --editingPanelWidth: 260px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.editing-panel {
+    display: flex;
+    gap: 7px;
+    background-color: rgb(41, 41, 41);
+    padding: 10px;
+    align-items: start;
+    flex-direction: column;
+    width: var(--editingPanelWidth);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1;
+}
+
+.element-editing-panel {
+    direction : ltr;
+}
+
+.editing-panel>label {
+    color: white;
+}
+
+.editing-panel input {
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white;
+}
+
+.elementEditing {
+    flex-direction: column;
+}
+
+.editing-panel button {
+    background-color: #8f1f9e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.editing-panel button:hover {
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.507);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: #e0e0e0;
+    /* Changed to align with right-side panel */
+    overflow-y: auto;
+    /* flex-grow: 1; */
+    padding: 20px;
+    margin-right: var(--editingPanelWidth);
+    /* height: 90vh; */
+    height: 100vh;
+    /* או גובה ספציפי אחר */
+    min-height: 0;
+    /* חשוב! מאפשר לתוכן לגלול */
+}
+
+.main>* {
+    flex-shrink: 0;
+    /* מונע מהאלמנטים להתכווץ */
+}
+
+p {
+    color: black;
+}
+
+body {
+    display: flex;
+    font-family: 'Varela Round', Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+.selected {
+    box-shadow: 0 0 5px 5px rgba(25, 118, 210, 0.7);
+}
+
+#delete-btn{
+    margin: 0 auto;
+}
+
+.clear-button-container {
+    margin: 0 auto;
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+}

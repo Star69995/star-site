@@ -1,0 +1,375 @@
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #f0f2f5;
+    --third-color: #fff;
+    --fourth-color: #e4e6eb;
+    --puzzle-font-size: 1.5rem;
+
+    touch-action: none;
+    touch-action: pan-y;
+    /* touch-action:manipulation; */
+
+    height: 100%
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 2rem; */
+    scroll-behavior: smooth;
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    /* border: #155724 solid 1px; */
+    margin: 2rem;
+    width: 90%;
+
+}
+
+h1 {
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.puzzle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.word-group {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+}
+
+.letter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 0.25rem; */
+    margin: 0 2px;
+    /* מרווח קטן בין אותיות באותה מילה */
+}
+
+.word-separator {
+    width: 20px;
+    /* מרווח גדול יותר בין מילים */
+    display: inline-block;
+}
+
+.encrypted-letter {
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    width: 1.5rem;
+    /* הקטנת הרוחב של כל אות */
+    text-align: center;
+}
+
+.solution-letter,
+.solution-letter-punctuation {
+    font-size: var(--puzzle-font-size);
+    color: #333;
+    width: 1.5rem;
+    /* הקטנת הרוחב של כל אות */
+    height: 2.5rem;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    background: transparent;
+    transition: border-color 0.3s;
+}
+
+.solution-letter-punctuation {
+    color: black;
+    opacity: 1;
+    border-bottom: none;
+}
+
+.solution-letter:focus {
+    outline: none;
+    border-bottom-color: #1a73e8;
+}
+
+.solution-letter.correct {
+    background-color: #90ee9044;
+    /* color: #155724; */
+}
+
+.solution-letter.incorrect {
+    background-color: #ffb6c662;
+    /* color: #721c24; */
+}
+
+.solution-letter.hint {
+    background-color: #cde5fc7a;
+}
+
+.solution-letter.active {
+    background-color: rgba(212, 212, 212, 0.301);
+}
+
+/* עיצוב קונטיינר המילים */
+.word-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1557b0;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.message {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+
+
+
+
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: none;
+    width: 90%;
+    border-radius: 20px;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    padding-top: 0px;
+}
+.close-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #fefefe;
+    /* רקע לבן מאחורי הכפתור */
+    z-index: 10000;
+    margin-bottom: 20px;
+    /* מרווח בין הכפתור לתוכן */
+}
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.instructions-text {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.instructions-text h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.instructions-text ol {
+    margin-right: 20px;
+}
+
+.instructions-text li {
+    margin-bottom: 10px;
+}
+
+
+
+/* הוספה לסגנונות הקיימים של המודל */
+
+.instructions-text {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.instructions-text h3 {
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.instructions-text p {
+    margin-bottom: 15px;
+}
+
+.instructions-text ul,
+.instructions-text ol {
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.instructions-text li {
+    margin-bottom: 8px;
+}
+
+.instructions-text strong {
+    color: #2c3e50;
+}
+
+/* הוספת מרווח בין הרשימות */
+.instructions-text ul+h3,
+.instructions-text ol+h3 {
+    margin-top: 25px;
+}
+
+
+
+
+/* ~~~~~~~~~~ keyboard ~~~~~~~~~~ */
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 20%; */
+    width: 100%;
+    position: sticky;
+    /* להצמיד את המקלדת לתחתית המסך */
+    bottom: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    /* רקע למקלדת */
+    padding-bottom: 20px;
+    z-index: 1000;
+    transform: translateY(0);
+
+}
+
+@media (min-width: 600px) {
+    #keyboard {
+        padding-bottom: 40px;
+    }
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 5px;
+    /* הכפתורים יעברו שורה כשאין מקום */
+    justify-content: center;
+    margin: 2px;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1em;
+    /* גודל משתנה בהתאם לגודל המסך */
+    width: 8vw;
+
+    /* רוחב מותאם למסך */
+    height: 12vw;
+    max-height: 50px;
+    /* גובה מותאם למסך */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    margin: 2px;
+    padding: 0%;
+}
+
+.key:hover {
+    background-color: #9cb3ff;
+}
+
+
+.key.used {
+    background-color: #dedede;
+    color: #383838
+        /* blue for used */
+}
+
+#keyboard {
+    background-color: rgb(203, 215, 241);
+}
+

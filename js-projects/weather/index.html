@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מזג אוויר</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>מזג האוויר</h1>
+        </header>
+
+        <main>
+            <!-- Weather Widget Container -->
+            <div id="weather-widget" class="weather-widget">
+                <!-- <div class="bg-white"> -->
+                    <div class="mb-4">
+                        <form id="weather-form">
+                            <div class="input-container">
+                                <input type="text" id="city-input" class="weather-input"
+                                    placeholder="הכנס שם עיר" required>
+                                <button type="submit" class="weather-button">
+                                    להצגה
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Weather Results Container -->
+                    <div id="weather-results" class="weather-info hidden">
+                        <div >
+                            <h2 id="city-name"></h2>
+                        </div>
+                        <div id="weather-description"></div>
+                        <div class="weather-metrics">
+                            <div class="weather-icon-wrapper">
+                                <div>טמפרטורה: <span id="temperature"></span>°C</div>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
+                                </svg>
+                            </div>
+
+                            <div class="weather-icon-wrapper">
+                                <div>לחות: <span id="humidity"></span>%</div>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 14.994c0 3.314-3.134 6.006-7 6.006s-7-2.692-7-6.006c0-2.838 3.5-8.994 7-12.994 3.5 4 7 10.156 7 12.994z" />
+                                </svg>
+                            </div>
+
+                            <div class="weather-icon-wrapper">
+                                <div>מרגיש כמו: <span id="feels-like"></span>°C</div>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                                </svg>
+                            </div>
+
+                            <div class="weather-icon-wrapper">
+                                <div>רוח: <span id="wind-speed"></span> מטר/שניה</div>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div id="clothing-recommendation"></div>
+
+                        <div id="hourly-forecast"></div>
+
+                        <div id="daily-forecast"></div>
+
+                    </div>
+
+                    <!-- Error Message Container -->
+                    <div id="error-message" class="error-message hidden"></div>
+
+                    <!-- Loading Indicator -->
+                    <div id="loading-indicator" class="loading-animation text-center hidden">
+                        טוען...
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

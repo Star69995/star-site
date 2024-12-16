@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>שעון עצר</title>
+    <!-- קישורים לסמליל -->
+    <link rel="icon" href="img/stopwatch.ico" type="image/x-icon">
+
+
+    <audio id="beepSound" src="audio/success-48018.mp3"></audio>
+
+
+
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1>שעון עצר</h1>
+        </div>
+        <div class="buttons container">
+            <button>5:00</button>
+            <button>10:00</button>
+            <button>20:00</button>
+            <button>30:00</button>
+            <button>45:00</button>
+            <button>1:00:00</button>
+            <button>1:30:00</button>
+            <button>2:00:00</button>
+
+            <div class="custom-time">
+                <input type="number" placeholder="שניות" id="seconds">
+                <p class="colon">:</p>
+                <input type="number" placeholder="דקות" id="minutes">
+                <p class="colon">:</p>
+                <input type="number" placeholder="שעות" id="hours">
+                <button id="customTimeButton">זמן אחר</button>
+            </div>
+        </div>
+
+        <div id="timer" class="container">
+            <span>
+                00:00:00
+            </span>
+        </div>
+        <div class="container">
+            <button id="startButton">התחלה</button>
+            <button id="stopButton">עצירה</button>
+            <button id="resetButton">איתחול</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
