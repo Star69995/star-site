@@ -46,21 +46,6 @@ cd starsite
 open index.html
 ```
 
-## מבנה הפרויקט
-```
-starsite/
-├── index.html              # דף הבית
-├── css/
-│   └── style.css          # קובץ עיצוב ראשי
-├── js/
-│   └── script.js          # קובץ JavaScript ראשי
-├── assets/
-│   ├── images/            # תמונות
-│   └── icons/             # אייקונים
-├── projects/              # דפי פרויקטים
-└── README.md              # תיעוד
-```
-
 ## רישיון
 פרויקט זה מופץ תחת רישיון MIT. ראה קובץ `LICENSE` לפרטים נוספים.
 
