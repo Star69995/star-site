@@ -75,7 +75,7 @@
         {
             "title": "שעון עצר",
             "description": "פרויקט שעון עצר מותאם למכשירים ניידים ובמחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
-            "image": "img/clock.webp",
+            "image": "img/timer.webp",
             "path": "js-projects/timer/",
             "zip": "js-projects/timer.zip",
             "languages": [
@@ -87,7 +87,7 @@
         {
             "title": "מנהל משימות",
             "description": "אפליקציה אינטראקטיבית לניהול רשימות ומשימות, עם שמירה ב-localStorage. מאפשרת הוספה, עריכה ומחיקה של משימות בצורה נוחה.",
-            "image": "img/task-manager.webp",
+            "image": "img/task_manager.webp",
             "path": "js-projects/task_manager/",
             "zip": "js-projects/task_manager.zip",
             "languages": [
@@ -110,15 +110,16 @@
             ]
         },
         {
-            "title": "הצפנה ופתרון חידות",
-            "description": "משחק הצפנה בו השחקן צריך לפענח את המילים המוסתרות על ידי קוד. מיועד לשימוש גם בניידים וגם במחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
+            "title": "קריפטוגרמה",
+            "description": "משחק קריפטוגרמה אינטראקטיבי שבו השחקן מפענח משפטים מוסתרים באמצעות הצפנה. המשפטים נלקחים מוויקיציטוט ומיובאים אוטומטית לקובץ JSON בעזרת קוד פייתון. המשחק מותאם לשימוש במכשירים ניידים ובמחשבים, ונבנה בטכנולוגיות HTML, CSS ו-JavaScript.",
             "image": "img/cryptogram.webp",
             "path": "js-projects/cryptogram/",
             "zip": "js-projects/cryptogram.zip",
             "languages": [
                 "HTML",
                 "CSS",
-                "JavaScript"
+                "JavaScript",
+                "Python"
             ]
         },
         {
@@ -135,7 +136,7 @@
         },
         {
             "title": "בונה דפים",
-            "description": "אפליקציה המאפשרת יצירת דפי אינטרנט בצורה אינטראקטיבית. המשתמש יכול לעצב וליצור דפים בקלות. נבנה ב-HTML, CSS ו-JavaScript.",
+            "description": "אפליקציה המאפשרת יצירת דפי אינטרנט בצורה אינטראקטיבית. המשתמש יכול לעצב וליצור דפים בקלות. הנתונים נשמרים בזיכרון המקומי (localStorage) להמשך עבודה. נבנה ב-HTML, CSS ו-JavaScript.",
             "image": "img/pageBuilder.webp",
             "path": "js-projects/pageBuilder/",
             "zip": "js-projects/pageBuilder.zip",
@@ -147,7 +148,7 @@
         },
         {
             "title": "מחשבון עץ",
-            "description": "מחשבון עץ המאפשר לבצע חישובים בתחום חיתוך עץ. מיועד גם למוביילים וגם למחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
+            "description": "מחשבון עץ המאפשר לבצע חישובים בתחום חיתוך עץ. מיועד גם למכשירים ניידים וגם למחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
             "image": "img/wood-calc.webp",
             "path": "js-projects/wood-calc/",
             "zip": "js-projects/wood-calc.zip",
