@@ -1,34 +1,68 @@
-# Starsite
+# Starsite - אתר פורטפוליו
 
-**Starsite** is a personal portfolio website built to showcase my web development skills and projects. Created primarily using **HTML** and **CSS**, this site meets the course requirements for a responsive, accessible, and visually appealing portfolio.
+## תיאור
 
-## Project Overview
+Starsite הוא אתר פורטפוליו אישי שמציג את כישורי פיתוח האינטרנט והפרויקטים שלי. האתר נבנה בעיקר באמצעות HTML ו-CSS, תוך שמירה על סטנדרטים גבוהים של רספונסיביות, נגישות ועיצוב מודרני.
 
-This project fulfills the final module requirements for an HTML + CSS course, demonstrating proficiency in building structured, responsive, and mobile-friendly web pages.
+האתר מציג מגוון פרויקטים שפיתחתי, ומציג את היכולות שלי בעבודות פיתוח, עיצוב וחוויית משתמש.
 
-## Features
+## תצוגה חיה
+ניתן לצפות באתר בכתובת: [Starsite](https://star69995.github.io/star-site/)
 
-- **Responsive Design**: The site is fully responsive, adjusting layouts for mobile, tablet, and desktop screens.
-- **Navigation Bar**: Includes a sticky navigation bar with links to each major section and a logo.
-- **Gallery of Projects**: Showcases six projects, each with an image, description, and tags for languages/technologies used.
-- **Project Detail Pages**: Each project links to an intermediate page with detailed project information, language icons, and options to view or download files.
-- **Contact Form**: A functional form in the "Contact" section with fields for name, phone, email, and message.
-- **Footer**: Includes credits for the website creator.
+## מאפיינים עיקריים
+### עיצוב רספונסיבי מלא
+- התאמה מושלמת למגוון מכשירים (מחשב, טאבלט וסמארטפון)
+- תצוגה אופטימלית בכל רזולוציית מסך
+- חוויית משתמש עקבית בכל הפלטפורמות
 
-## Project Preview
+### ממשק משתמש מתקדם
+- תפריט ניווט דביק עם לוגו וקישורים מהירים
+- גלריית פרויקטים אינטראקטיבית
+- דפי פרויקט מפורטים עם תיעוד מקיף
+- טופס יצירת קשר אינטראקטיבי
 
-Access the live site here: [Starsite on GitHub Pages](https://star69995.github.io/star-site/)
+### תכונות טכניות
+- קוד HTML סמנטי לנגישות מיטבית
+- עיצוב CSS מודולרי וגמיש
+- שילוב אייקונים מ-Font Awesome
+- אופטימיזציה לביצועים מהירים
 
-## Technologies Used
+## טכנולוגיות
+- HTML5
+- CSS3
+- JavaScript
+- Font Awesome
+- GitHub Pages
 
-- **HTML** and **CSS**: Core structure and styling, emphasizing semantic tags and CSS techniques for accessibility and flexibility.
-- **Font Awesome**: Used for icons that represent programming languages and frameworks on the project detail pages.
+## התקנה והפעלה
+```bash
+# שכפול המאגר
+git clone https://github.com/your-username/starsite.git
 
-## Structure and Setup
+# כניסה לתיקיית הפרויקט
+cd starsite
 
-The site consists of:
-- **index.html**: The homepage, displaying the main sections and the portfolio gallery.
-- **intermediate.html**: Template for each project page, populated dynamically with the project details.
-- **projects.json**: JSON file containing data for each project, making it easy to add or update projects.
-- **6 Project Pages**: Each page highlights specific HTML and CSS techniques applied to the project.
+# פתיחת האתר
+open index.html
+```
 
+## מבנה הפרויקט
+```
+starsite/
+├── index.html              # דף הבית
+├── css/
+│   └── style.css          # קובץ עיצוב ראשי
+├── js/
+│   └── script.js          # קובץ JavaScript ראשי
+├── assets/
+│   ├── images/            # תמונות
+│   └── icons/             # אייקונים
+├── projects/              # דפי פרויקטים
+└── README.md              # תיעוד
+```
+
+## רישיון
+פרויקט זה מופץ תחת רישיון MIT. ראה קובץ `LICENSE` לפרטים נוספים.
+
+---
+פותח על ידי סטאר © 2024
