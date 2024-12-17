@@ -42,10 +42,11 @@
             </p>
         </div>
 
-        <div class="strip icons" id="langs">
+        <div class="strip icons langs" id="langs">
             <i class="fa-brands fa-html5" title="HTML"></i>
             <i class="fa-brands fa-css3-alt" title="CSS"></i>
             <i class="fa-brands fa-js" title="JavaScript"></i>
+            <i class="fa-brands fa-python" title="Python"></i>
             <!-- <i class="fa-brands fa-react" title="React"></i> -->
 
         </div>
@@ -150,6 +151,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             // קריאה לפונקציות לאחר טעינת הדף
             fetchProjects();
+            makeIconsTouchable();
 
             // חיבור טופס ולידציה לאחר טעינה
             const form = document.querySelector('form');

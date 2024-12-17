@@ -49,7 +49,7 @@
             <a class="button" id="pageLink" href="#" target="_blank">מעבר לדף</a>
             <a class="button" id="downloadLink" href="#">הורד את הפרויקט</a>
         </div>
-        <div class="strip icons" id="langs">
+        <div class="strip icons langs">
             <i class="fa-brands fa-html5" title="HTML"></i>
             <i class="fa-brands fa-css3-alt" title="CSS"></i>
         </div>
@@ -60,79 +60,13 @@
 
     <script src="script.js"></script>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
             const projectPath = urlParams.get('project'); // The unique path or ID for the project
-        fetchProjectForPage(projectPath);
+            fetchProjectForPage(projectPath);
+            makeIconsTouchable();
+        });
     </script>
-
-
-    <!-- <script>
-        // Get the `project` parameter from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const projectPath = urlParams.get('project'); // The unique path or ID for the project
-
-        // Fetch all project data from the JSON file
-        fetch('projects.json')
-            .then(response => response.json())
-            .then(data => {
-                // שמות הקטגוריות שבהן נחפש
-                const categories = ['css-projects', 'js-projects'];
-
-                // חפש את הפרויקט בקטגוריות
-                let project = null;
-                for (const category of categories) {
-                    if (data[category]) {
-                        project = data[category].find(p => p.path === projectPath);
-                        if (project) break; // מצאנו, אין צורך להמשיך
-                    }
-                }
-
-                if (project) {
-                    // Set the page title
-                    document.title = `פרויקט ${project.title}`;
-
-                    // Set the dynamic content
-                    document.getElementById('pageTitle').innerText = project.title;
-                    document.getElementById('pageDescription').innerText = project.description;
-                    document.getElementById('pageLink').href = project.path;
-                    document.getElementById('pageImage').src = project.image;
-
-                    // Set the download link
-                    document.getElementById('downloadLink').href = project.zip;
-
-                    // Display language icons
-                    const iconsContainer = document.getElementById('langs');
-                    iconsContainer.innerHTML = ''; // Clear existing icons
-                    project.languages.forEach(language => {
-                        iconsContainer.innerHTML += getLanguageIcon(language);
-                    });
-                } else {
-                    console.error('Project not found.');
-                    document.getElementById('pageTitle').innerText = 'Project Not Found';
-                }
-            })
-            .catch(error => console.error('Error fetching project data:', error));
-
-        // Function to generate language icons
-        function getLanguageIcon(language) {
-            switch (language.toLowerCase()) {
-                case 'html':
-                    return '<i class="fa-brands fa-html5" title="HTML"></i>';
-                case 'css':
-                    return '<i class="fa-brands fa-css3-alt" title="CSS"></i>';
-                case 'javascript':
-                    return '<i class="fa-brands fa-js" title="JavaScript"></i>';
-                case 'python':
-                    return '<i class="fa-brands fa-python" title="Python"></i>';
-                case 'react':
-                    return '<i class="fa-brands fa-react" title="React"></i>';
-                default:
-                    return '';
-            }
-        }
-
-
-    </script> -->
 
 </body>
 

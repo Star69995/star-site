@@ -1,26 +1,32 @@
-// JavaScript to toggle text display on click
-document.querySelectorAll('#langs i').forEach(icon => {
-    icon.addEventListener('click', (event) => {
-        // Prevent the event from bubbling up to the document click event
-        event.stopPropagation();
-
-        // Remove any existing description spans
-        document.querySelectorAll('.icon-text').forEach(text => text.remove());
-
-        // Create a new description span and set its text
-        const textSpan = document.createElement('span');
-        textSpan.classList.add('icon-text');
-        textSpan.innerText = icon.getAttribute('title');
-
-        // Insert the span after the icon
-        icon.parentNode.insertBefore(textSpan, icon.nextSibling);
+function makeIconsTouchable() {
+    // JavaScript to toggle text display on click
+    document.querySelectorAll('.langs i').forEach(icon => {
+        icon.addEventListener('click', (event) => {
+            addTouchLabels(event, icon);
+        });
     });
-});
 
-// Hide text when clicking outside of icons
-document.addEventListener('click', () => {
+    // Hide text when clicking outside of icons
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.icon-text').forEach(text => text.remove());
+    });
+}
+function addTouchLabels(event, icon) {
+    // Prevent the event from bubbling up to the document click event
+    event.stopPropagation();
+
+    // Remove any existing description spans
     document.querySelectorAll('.icon-text').forEach(text => text.remove());
-});
+
+    // Create a new description span and set its text
+    const textSpan = document.createElement('span');
+    textSpan.classList.add('icon-text');
+    textSpan.innerText = icon.getAttribute('title');
+
+    // Insert the span after the icon
+    icon.parentNode.insertBefore(textSpan, icon.nextSibling);
+}
+
 // Function to get the icon HTML for each language
 function getLanguageIcon(language) {
     switch (language.toLowerCase()) {
@@ -109,10 +115,15 @@ function fetchProjectForPage(projectPath) {
                 document.getElementById('downloadLink').href = project.zip;
 
                 // Display language icons
-                const iconsContainer = document.getElementById('langs');
+                const iconsContainer = document.querySelector('.langs');
                 iconsContainer.innerHTML = ''; // Clear existing icons
                 project.languages.forEach(language => {
                     iconsContainer.innerHTML += getLanguageIcon(language);
+                });
+                iconsContainer.querySelectorAll('i').forEach(icon => {
+                    icon.addEventListener('click', (event) => {
+                        addTouchLabels(event, icon);
+                    });
                 });
             } else {
                 console.error('Project not found.');
