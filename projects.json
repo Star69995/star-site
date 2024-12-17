@@ -73,15 +73,16 @@
     ],
     "js-projects": [
         {
-            "title": "שעון עצר",
-            "description": "פרויקט שעון עצר מותאם למכשירים ניידים ובמחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
-            "image": "img/timer.webp",
-            "path": "js-projects/timer/",
-            "zip": "js-projects/timer.zip",
+            "title": "קריפטוגרמה",
+            "description": "משחק קריפטוגרמה אינטראקטיבי שבו השחקן מפענח משפטים מוסתרים באמצעות הצפנה. המשפטים נלקחים מוויקיציטוט ומיובאים אוטומטית לקובץ JSON בעזרת קוד פייתון. המשחק מותאם לשימוש במכשירים ניידים ובמחשבים, ונבנה בטכנולוגיות HTML, CSS ו-JavaScript.",
+            "image": "img/cryptogram.webp",
+            "path": "js-projects/cryptogram/",
+            "zip": "js-projects/cryptogram.zip",
             "languages": [
                 "HTML",
                 "CSS",
-                "JavaScript"
+                "JavaScript",
+                "Python"
             ]
         },
         {
@@ -107,19 +108,6 @@
                 "CSS",
                 "JavaScript",
                 "OpenWeather API"
-            ]
-        },
-        {
-            "title": "קריפטוגרמה",
-            "description": "משחק קריפטוגרמה אינטראקטיבי שבו השחקן מפענח משפטים מוסתרים באמצעות הצפנה. המשפטים נלקחים מוויקיציטוט ומיובאים אוטומטית לקובץ JSON בעזרת קוד פייתון. המשחק מותאם לשימוש במכשירים ניידים ובמחשבים, ונבנה בטכנולוגיות HTML, CSS ו-JavaScript.",
-            "image": "img/cryptogram.webp",
-            "path": "js-projects/cryptogram/",
-            "zip": "js-projects/cryptogram.zip",
-            "languages": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Python"
             ]
         },
         {
@@ -152,6 +140,18 @@
             "image": "img/wood-calc.webp",
             "path": "js-projects/wood-calc/",
             "zip": "js-projects/wood-calc.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "title": "שעון עצר",
+            "description": "פרויקט שעון עצר מותאם למכשירים ניידים ובמחשבים, נבנה ב-HTML, CSS ו-JavaScript.",
+            "image": "img/timer.webp",
+            "path": "js-projects/timer/",
+            "zip": "js-projects/timer.zip",
             "languages": [
                 "HTML",
                 "CSS",
