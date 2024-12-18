@@ -11,6 +11,25 @@ const elements = {
     fullInstructions: document.getElementById('full-instructions'),
 };
 
+// אסוף את תיבות הקלט ותיבות הסימון
+elements.sizeInputs = document.querySelectorAll('.size-input');
+elements.excludeCheckboxes = document.querySelectorAll('.exclude-checkbox');
+
+// חיבור אירועים לתיבות הסימון
+elements.excludeCheckboxes.forEach((checkbox, index) => {
+    checkbox.addEventListener('change', () => {
+        const relatedInput = elements.sizeInputs[index];
+        // נטרול תיבת הקלט אם תיבת הסימון אינה מסומנת
+        if (checkbox.checked) {
+            relatedInput.disabled = false;
+        } else {
+            relatedInput.disabled = true;
+        }
+    });
+});
+
+
+
 // חישוב קומבינציות
 elements.calculateBtn.addEventListener('click', () => {
     // בדיקת תקינות השדות
@@ -59,7 +78,11 @@ elements.calculateBtn.addEventListener('click', () => {
 
     // אם כל השדות תקינים, מבצע את החישוב
     const numPieces = parseInt(elements.numPieces.value);
-    const sizes = Array.from(elements.sizeInputs).map(input => parseFloat(input.value));
+    // איסוף גדלים תוך התעלמות מתיבות קלט שסומנו כ"לא לכלול"
+    const sizes = Array.from(elements.sizeInputs)
+        .map((input, index) => elements.excludeCheckboxes[index].checked ? parseFloat(input.value) : null)
+        .filter(size => size !== null);
+
     const rangeLow = parseFloat(elements.rangeLow.value);
     const rangeHigh = parseFloat(elements.rangeHigh.value);
     elements.output.textContent = ''; // נקה את הפלט הקודם
