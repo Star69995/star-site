@@ -86,18 +86,6 @@
             ]
         },
         {
-            "title": "מנהל משימות",
-            "description": "אפליקציה אינטראקטיבית לניהול רשימות ומשימות, עם שמירה ב-localStorage. מאפשרת הוספה, עריכה ומחיקה של משימות בצורה נוחה.",
-            "image": "img/task_manager.webp",
-            "path": "js-projects/task_manager/",
-            "zip": "js-projects/task_manager.zip",
-            "languages": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ]
-        },
-        {
             "title": "תחזית מזג אוויר",
             "description": "אפליקציה אינטראקטיבית לתחזית מזג אוויר, כולל תחזית שעתית ויומית, בשילוב המלצות לבוש. נבנה באמצעות HTML, CSS ו-JavaScript עם שימוש ב-OpenWeather API.",
             "image": "img/weather.webp",
@@ -111,11 +99,11 @@
             ]
         },
         {
-            "title": "משחק מתמטי",
-            "description": "משחק חידות מתמטיות לאימון המוח. כולל שלבים שונים ומשימות משתנות. נבנה ב-HTML, CSS ו-JavaScript.",
-            "image": "img/mathGame.webp",
-            "path": "js-projects/mathGame/",
-            "zip": "js-projects/mathGame.zip",
+            "title": "מנהל משימות",
+            "description": "אפליקציה אינטראקטיבית לניהול רשימות ומשימות, עם שמירה ב-localStorage. מאפשרת הוספה, עריכה ומחיקה של משימות בצורה נוחה.",
+            "image": "img/task_manager.webp",
+            "path": "js-projects/task_manager/",
+            "zip": "js-projects/task_manager.zip",
             "languages": [
                 "HTML",
                 "CSS",
@@ -123,11 +111,11 @@
             ]
         },
         {
-            "title": "בונה דפים",
-            "description": "אפליקציה המאפשרת יצירת דפי אינטרנט בצורה אינטראקטיבית. המשתמש יכול לעצב וליצור דפים בקלות. הנתונים נשמרים בזיכרון המקומי (localStorage) להמשך עבודה. נבנה ב-HTML, CSS ו-JavaScript.",
-            "image": "img/pageBuilder.webp",
-            "path": "js-projects/pageBuilder/",
-            "zip": "js-projects/pageBuilder.zip",
+            "title": "משחק מתמטי",
+            "description": "משחק חידות מתמטיות לאימון המוח. כולל שלבים שונים ומשימות משתנות. נבנה ב-HTML, CSS ו-JavaScript.",
+            "image": "img/mathGame.webp",
+            "path": "js-projects/mathGame/",
+            "zip": "js-projects/mathGame.zip",
             "languages": [
                 "HTML",
                 "CSS",
@@ -152,6 +140,18 @@
             "image": "img/timer.webp",
             "path": "js-projects/timer/",
             "zip": "js-projects/timer.zip",
+            "languages": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        },
+        {
+            "title": "בונה דפים",
+            "description": "אפליקציה המאפשרת יצירת דפי אינטרנט בצורה אינטראקטיבית. המשתמש יכול לעצב וליצור דפים בקלות. הנתונים נשמרים בזיכרון המקומי (localStorage) להמשך עבודה. נבנה ב-HTML, CSS ו-JavaScript.",
+            "image": "img/pageBuilder.webp",
+            "path": "js-projects/pageBuilder/",
+            "zip": "js-projects/pageBuilder.zip",
             "languages": [
                 "HTML",
                 "CSS",
