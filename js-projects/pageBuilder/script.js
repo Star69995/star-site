@@ -298,11 +298,10 @@ document.body.appendChild(main);
 let globalId = JSON.parse(localStorage.getItem('globalId')) || 1;
 function loadFromLocalStorage() {
     
-    // console.log(globalId);
     const savedElements = JSON.parse(localStorage.getItem('elements'));
     if (savedElements) {
         savedElements.forEach(({ id, type, propStyles}) => {
-            // console.log(id, type, propStyles);
+
             // צור אלמנט חדש דרך המחלקה Element
             const elementInstance = new Element(type, id, propStyles);
         });
