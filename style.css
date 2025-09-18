@@ -260,13 +260,11 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
 }
 
-
 .imgContainer img {
     max-height: 220px;
 }
 
-
-.langs i {
+i {
     background-color: #b6b1ff;
     border-radius: 50%;
     padding: 20px;
@@ -294,10 +292,23 @@ footer {
     z-index: 10;
 }
 
-.langs i:hover {
+i:hover {
     color: #008cff;
     cursor: help;
 }
+
+
+nav i {
+    background-color: transparent;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+nav i:hover {
+    color: white;
+    cursor: pointer;
+}
+
 
 .icons {
     direction: ltr;
