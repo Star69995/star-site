@@ -37,10 +37,10 @@ Starsite הוא אתר פורטפוליו אישי שמציג את כישורי 
 ## התקנה והפעלה
 ```bash
 # שכפול המאגר
-git clone https://github.com/your-username/starsite.git
+git clone https://github.com/Star69995/star-site.git
 
 # כניסה לתיקיית הפרויקט
-cd starsite
+cd star-site
 
 # פתיחת האתר
 open index.html
@@ -50,4 +50,4 @@ open index.html
 פרויקט זה מופץ תחת רישיון MIT. ראה קובץ `LICENSE` לפרטים נוספים.
 
 ---
-פותח על ידי סטאר © 2024
+פותח על ידי סטאר © 2025

@@ -266,7 +266,7 @@ footer {
 }
 
 
-i {
+.langs i {
     background-color: #b6b1ff;
     border-radius: 50%;
     padding: 20px;
@@ -294,7 +294,7 @@ i {
     z-index: 10;
 }
 
-i:hover {
+.langs i:hover {
     color: #008cff;
     cursor: help;
 }
