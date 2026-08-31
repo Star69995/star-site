@@ -90,9 +90,7 @@ function fetchProjects() {
         });
 }
 
-// TEMP for local testing against the local wrangler dev server - revert to
-// 'https://star-projects-home.star69995.workers.dev' before committing/deploying.
-const LINKS_API_BASE = 'https://star-projects-home.star69995.workers.dev/';
+const LINKS_API_BASE = 'https://star-projects-home.star69995.workers.dev';
 
 function insertLinkProject(link) {
     // data-manual marks a description typed in the admin editor, which wins over the
