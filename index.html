@@ -9,6 +9,18 @@
 
     <link rel="icon" href="img/winged_star.png" type="image/png">
 
+    <meta property="og:title" content="האתר של סטאר">
+    <meta property="og:description" content="ברוכים הבאים לתיק העבודות שלי - המומחיות שלי בעיצוב ובקוד עושה את כל ההבדל.">
+    <meta property="og:image" content="https://star69995.github.io/star-site/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://star69995.github.io/star-site/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="האתר של סטאר">
+    <meta name="twitter:description" content="ברוכים הבאים לתיק העבודות שלי - המומחיות שלי בעיצוב ובקוד עושה את כל ההבדל.">
+    <meta name="twitter:image" content="https://star69995.github.io/star-site/img/og-image.png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,6 +36,7 @@
             <!-- <li><a href="#projects">תיק העבודות </a></li> -->
             <li><a href="#css-projects"> עבודות HTML ו-CSS</a></li>
             <li><a href="#js-projects"> עבודות JavaScript </a></li>
+            <li id="more-projects-nav-item" hidden><a href="#more-projects"> פרויקטים נוספים</a></li>
             <!-- <li><a href="#contact">צרו קשר</a></li> -->
 
             <!-- link to github -->
@@ -116,6 +129,15 @@
             </div>
         </section>
 
+        <section class="strip darker" id="more-projects" hidden>
+            <div>
+                <h2>פרויקטים נוספים</h2>
+            </div>
+
+            <div class="dynamic-projects">
+            </div>
+        </section>
+
         <!-- <div class="strip form-container">
             <form>
                 <h2 id="contact">צרו קשר</h2>
@@ -160,7 +182,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // קריאה לפונקציות לאחר טעינת הדף
-            fetchProjects();
+            fetchProjects().then(data => {
+                const jsProjectNames = data ? data['js-projects'].map(project => project.title) : [];
+                fetchDynamicProjects(jsProjectNames);
+            });
             makeIconsTouchable();
 
             // חיבור טופס ולידציה לאחר טעינה

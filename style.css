@@ -128,7 +128,8 @@ p {
 
 
 .css-projects,
-.js-projects {
+.js-projects,
+.dynamic-projects {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -398,7 +399,7 @@ form button {
 
 
 @media (min-width: 1800px) {
-    .css-projects, .js-projects {
+    .css-projects, .js-projects, .dynamic-projects {
         margin-left: calc((100vw - (400px * 4)) / 2);
         margin-right: calc((100vw - (400px * 4)) / 2);
     }
