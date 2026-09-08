@@ -32,11 +32,10 @@
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <ul class="horizontalNav left">
             <li><a href="#about">אודותיי</a></li>
-            <li><a href="#langs">השפות שלי</a></li>
+            <li id="new-projects-nav-item" hidden><a href="#new-projects"> הפרויקטים החדשים</a></li>
             <!-- <li><a href="#projects">תיק העבודות </a></li> -->
-            <li><a href="#css-projects"> עבודות HTML ו-CSS</a></li>
             <li><a href="#js-projects"> עבודות JavaScript </a></li>
-            <li id="more-projects-nav-item" hidden><a href="#more-projects"> פרויקטים נוספים</a></li>
+            <li><a href="#css-projects"> עבודות HTML ו-CSS</a></li>
             <!-- <li><a href="#contact">צרו קשר</a></li> -->
 
             <!-- link to github -->
@@ -61,26 +60,8 @@
             </p>
         </div>
 
-        <div class="strip icons langs" id="langs">
-
-            <!-- Frontend -->
-            <i class="fa-brands fa-html5" title="HTML5"></i>
-            <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-            <i class="fa-brands fa-js" title="JavaScript"></i>
-            <i class="fa-brands fa-react" title="React"></i>
-
-            <!-- Backend -->
-            <i class="fa-brands fa-node" title="Node.js"></i>
-            <i class="fa-solid fa-database" title="Databases (SQL & MongoDB)"></i>
-            <i class="fa-brands fa-python" title="Python"></i>
-
-
-        </div>
-
         <div class="strip" id="about">
             <h2> אודותיי</h2>
-
-            <img src="img/Star.jpg" alt="תמונה של סטאר">
 
             <p>
                 אני איש צעיר מלא מוטיבציה והתלהבות, במיוחד לפרויקטי קוד. ופה נמצא רק קצה הקרחון.
@@ -88,29 +69,18 @@
             <p> הגבול היחיד הוא הדמיון.</p>
             </p>
 
-            <a class="button" href="Star Cohen CV.pdf" download="Star Cohen CV.pdf">הורדת קורות
-                חיי</a>
+            <a class="button" href="https://www.linkedin.com/in/star-cohen" target="_blank" rel="noopener">לינקדאין</a>
         </div>
 
-
-        <section class="strip darker" id="css-projects">
+        <section class="strip darker" id="new-projects" hidden>
             <div>
-                <h2>עבודות HTML ו-CSS</h2>
+                <h2>הפרויקטים החדשים</h2>
             </div>
 
-
-            <div class="css-projects">
-
-                <div class="imgContainer">
-                    <a href="#">
-                        <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
-                        <h3>פרויקט</h3>
-                        <p>דף נחיתה</p>
-                    </a>
-                </div>
-
+            <div class="dynamic-projects">
             </div>
         </section>
+
 
         <section class="strip darker" id="js-projects">
             <div>
@@ -129,12 +99,22 @@
             </div>
         </section>
 
-        <section class="strip darker" id="more-projects" hidden>
+        <section class="strip darker" id="css-projects">
             <div>
-                <h2>פרויקטים נוספים</h2>
+                <h2>עבודות HTML ו-CSS</h2>
             </div>
 
-            <div class="dynamic-projects">
+
+            <div class="css-projects">
+
+                <div class="imgContainer">
+                    <a href="#">
+                        <img src="https://i.ytimg.com/vi/Gn7kSPL8ArU/maxresdefault.jpg" alt="change me">
+                        <h3>פרויקט</h3>
+                        <p>דף נחיתה</p>
+                    </a>
+                </div>
+
             </div>
         </section>
 
@@ -174,7 +154,7 @@
 
     </section>
     <footer>
-        <p>נבנה, עוצב וצויר על ידי <b>סטאר</b>, כל הזכויות שמורות 2025.</p>
+        <p>נבנה, עוצב וצויר על ידי <b>סטאר</b>, כל הזכויות שמורות 2026.</p>
     </footer>
 
     <script src="script.js"></script>
@@ -186,7 +166,6 @@
                 const jsProjectNames = data ? data['js-projects'].map(project => project.title) : [];
                 fetchDynamicProjects(jsProjectNames);
             });
-            makeIconsTouchable();
 
             // חיבור טופס ולידציה לאחר טעינה
             const form = document.querySelector('form');
