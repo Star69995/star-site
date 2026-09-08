@@ -75,12 +75,24 @@ function loadLinkThumbnails(container) {
 // regardless of what the link-manager worker returns.
 const DYNAMIC_PROJECT_EXCLUDED_NAMES = ['האתר של סטאר'];
 
+function insertLinkSection(section) {
+    return `
+        <div class="dynamic-project-section">
+            <h3>${section.name}</h3>
+            <div class="dynamic-projects">
+                ${section.links.map(insertLinkProject).join('')}
+            </div>
+        </div>
+    `;
+}
+
 function fetchDynamicProjects(existingProjectNames = []) {
-    // Fetch externally-hosted project links from the link-manager worker.
-    // The section stays hidden (no space reserved on the page) until links actually load.
+    // Fetch externally-hosted project links (grouped into sections) from the
+    // link-manager worker. The section stays hidden (no space reserved on the page)
+    // until links actually load.
     const section = document.querySelector('#new-projects');
     const navItem = document.querySelector('#new-projects-nav-item');
-    const container = section?.querySelector('.dynamic-projects');
+    const container = section?.querySelector('.dynamic-projects-sections');
     if (!container) return;
 
     fetch(`${LINKS_API_BASE}/api/links`)
@@ -88,15 +100,21 @@ function fetchDynamicProjects(existingProjectNames = []) {
             if (!response.ok) throw new Error(`bad status ${response.status}`);
             return response.json();
         })
-        .then(links => {
+        .then(data => {
             // Skip links that duplicate a project already shown in the JS projects
-            // section, and links explicitly excluded (e.g. this site itself).
-            const filteredLinks = links.filter(link =>
-                !DYNAMIC_PROJECT_EXCLUDED_NAMES.includes(link.name) &&
-                !existingProjectNames.includes(link.name)
-            );
-            if (!filteredLinks.length) return;
-            container.innerHTML = filteredLinks.map(insertLinkProject).join('');
+            // section, and links explicitly excluded (e.g. this site itself), then
+            // drop any section left empty by that filtering.
+            const filteredSections = (data.sections ?? [])
+                .map(section => ({
+                    ...section,
+                    links: section.links.filter(link =>
+                        !DYNAMIC_PROJECT_EXCLUDED_NAMES.includes(link.name) &&
+                        !existingProjectNames.includes(link.name)
+                    ),
+                }))
+                .filter(section => section.links.length);
+            if (!filteredSections.length) return;
+            container.innerHTML = filteredSections.map(insertLinkSection).join('');
             loadLinkThumbnails(container);
             section.hidden = false;
             if (navItem) navItem.hidden = false;

@@ -137,6 +137,21 @@ p {
     flex-wrap: wrap;
 }
 
+.dynamic-projects-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.dynamic-project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 
 .strip {
     text-align: center;
