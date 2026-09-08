@@ -279,6 +279,16 @@ footer {
     max-height: 220px;
 }
 
+.imgContainer h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.imgContainer p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
 i {
     background-color: #b6b1ff;
     border-radius: 50%;
