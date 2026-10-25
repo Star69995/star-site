@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://star69995.github.io/star-site/sitemap.xml
