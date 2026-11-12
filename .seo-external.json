@@ -71,6 +71,12 @@
         "name": "Tavnit 3D - תכנון תלת-ממד פשוט ל-Windows",
         "url": "https://star69995.github.io/tavnit3d",
         "description": "צורות מוכנות, מידות מדויקות, חומרים, מדבקות ותמונות כמו צילום, וייצוא ל-STL להדפסה בתלת-ממד. חינם ובקוד פתוח, מבוססת על Dune 3D."
+      },
+      {
+        "id": "ff5c4b94-6172-45b1-9d1f-5172974c8cf9",
+        "name": "Calibre Zen Margin: calibre, simple and intuitive",
+        "url": "https://star69995.github.io/calibre-zen-margin/",
+        "description": "A simple, intuitive interface for calibre, with every feature kept. Free and open source, based on calibre by Kovid Goyal and Calibre Zen by purplecandy."
       }
     ]
   },

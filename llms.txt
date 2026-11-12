@@ -20,6 +20,7 @@
 - [יומן יומי](https://daily-diary.star69995.workers.dev): מקום לפרוק, לשחרר ולתעד את המסע שלך - יומן אישי בעברית, נשמר מקומית במכשיר שלך בלבד.
 - [משבצת](https://starcross-crossword.web.app/): בנו ופתרו תשבצים בעברית, שתפו עם חברים ועקבו אחרי ההתקדמות שלכם.
 - [Tavnit 3D - תכנון תלת-ממד פשוט ל-Windows](https://star69995.github.io/tavnit3d): צורות מוכנות, מידות מדויקות, חומרים, מדבקות ותמונות כמו צילום, וייצוא ל-STL להדפסה בתלת-ממד. חינם ובקוד פתוח, מבוססת על Dune 3D.
+- [Calibre Zen Margin: calibre, simple and intuitive](https://star69995.github.io/calibre-zen-margin/): A simple, intuitive interface for calibre, with every feature kept. Free and open source, based on calibre by Kovid Goyal and Calibre Zen by purplecandy.
 
 ## לשימוש ספציפי מאוד
 
